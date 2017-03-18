@@ -1,0 +1,165 @@
+@function hsb($h-hsb, $s-hsb, $b-hsb, $a: 1) {
+  @if $b-hsb == 0 {
+	@return hsla(0, 0, 0, $a)
+  } @else {
+	$l-hsl: ($b-hsb/2) * (2 - ($s-hsb/100));
+	$s-hsl: ($b-hsb * $s-hsb) / if($l-hsl < 50, $l-hsl * 2, 200 - $l-hsl * 2);
+	@return hsla($h-hsb, $s-hsl, $l-hsl, $a);
+  }
+}
+
+$header-text-font: "Lato", Helvetica, Arial, sans-serif;
+$body-text-font: $header-text-font;
+$colour-100: #292A38;
+$colour-200: #4A4C64;
+$colour-300: rgb(136, 137, 153);
+$colour-400: rgb(200, 201, 208);
+$colour-500: rgb(241, 241, 243);
+$accent-colour: #D34242;
+$accent-colour-light: #d44545;
+$shadow-colour: rgba(0, 0, 0, 0.16);
+$font-colour: $colour-200;
+$accent-font-colour: $colour-400;
+$header-weight: 900;
+$font-weight: 400;
+
+body {
+  margin: 0;
+}
+
+main {
+  background-color: $colour-500;
+
+  .content {
+	margin: 3.5rem;
+  }
+
+  div.fullPage {
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+  }
+
+  .card {
+	background-color: $colour-500;
+	box-shadow: 0 3px 28px 0 $shadow-colour;
+	border: none;
+  }
+
+  .center {
+	margin: auto;
+  }
+
+  #idCard {
+	width: 70vw;
+	height: 53vh;
+	display: flex;
+	flex-direction: row;
+
+	#left {
+	  width: 26vw;
+	  height: 53vh;
+	  background: url("/images/selfie-2.jpg") no-repeat center;
+	  background-size: cover;
+	}
+
+	#right {
+	  display: flex;
+	  width: 44vw;
+	  height: 100%;
+	}
+  }
+
+  #photoCard {
+	width: 100vw;
+	height: 76vh;
+	display: flex;
+	flex-direction: row;
+	overflow-y: hidden;
+	overflow-x: scroll;
+	white-space: nowrap;
+
+	#left {
+	  width: 15vw;
+	  height: 76vh;
+	}
+
+	img {
+	  height: calc(76vh - 7rem);
+	  padding-right: 3.5rem;
+	}
+  }
+
+  h1 {
+	font-size: 80pt;
+	padding-bottom: 0.25rem;
+  }
+
+  h2 {
+	font-size: 45pt;
+  }
+
+  p {
+	font-family: $body-text-font;
+	color: $font-colour;
+	font-weight: $font-weight;
+	font-size: 15pt;
+	line-height: 135%;
+	padding-top: 0.75rem;
+	padding-bottom: 0.75rem;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+	font-family: $header-text-font;
+	font-weight: $header-weight;
+	color: $font-colour;
+  }
+
+  a {
+	text-decoration: none;
+	font-weight: 600;
+	color: $colour-100;
+  }
+
+  #accent {
+	font: $accent-font-colour;
+  }
+
+  button {
+	font-family: $body-text-font;
+	color: $colour-500;
+	background-color: $accent-colour;
+	border: none;
+	font-size: 1rem;
+	padding: .5rem 1rem .5rem 1rem;
+  }
+
+  button:hover, button:active {
+	box-shadow: 0 3px 14px 0 $shadow-colour;
+	background-color: $accent-colour-light;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+.fade-appear {
+  opacity: 0;
+}
+
+.fade-appear.fade-appear-active {
+  opacity: 1;
+  transition: opacity 2s ease-in-out;
+}
+
+.fade-leave {
+  opacity: 1;
+}
+
+.fade-leave.fade-leave-active {
+  opacity: 0;
+  transition: opacity 500ms ease-out;
+}
