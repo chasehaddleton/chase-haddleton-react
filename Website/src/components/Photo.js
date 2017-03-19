@@ -7,7 +7,6 @@ class Photo extends React.Component {
 		this.imagePath = '/images/';
 
 		this.state = {
-			id: props.obj.id,
 			name: props.obj.name,
 			fileName: this.imagePath + props.obj.fileName,
 			type: props.obj.type
@@ -15,7 +14,7 @@ class Photo extends React.Component {
 	}
 
 	render() {
-		return <img src={this.state.fileName} className="photo" classID={this.state.id} id={this.state.id}
+		return <img src={this.state.fileName} className="photo" classID={this.state.name} id={this.state.name}
 		            key={this.state.name} alt={this.state.fileName}/>;
 	}
 }

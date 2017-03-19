@@ -5,6 +5,7 @@ import Center from "./components/Center";
 import createHistory from "history/createBrowserHistory";
 import Home from "./pages/Home";
 import Photos from "./pages/Photos";
+import Footer from "./pages/Footer";
 import NoMatch from "./pages/NoMatch";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
@@ -30,6 +31,7 @@ class App extends Component {
 						</Center>
 					</Router>
 				</FullPage>
+				<Footer/>
 			</main>
 		)
 	}

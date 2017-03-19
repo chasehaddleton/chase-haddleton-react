@@ -79,11 +79,10 @@ time,
 mark,
 audio,
 video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	vertical-align: baseline;
-}
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
 article,
@@ -98,179 +97,154 @@ menu,
 nav,
 section,
 main {
-	display: block;
-}
+  display: block; }
 
 body {
-	line-height: 1.35;
-}
+  line-height: 1.35; }
 
 ol,
 ul {
-	list-style: none;
-}
+  list-style: none; }
 
 blockquote,
 q {
-	quotes: none;
-}
+  quotes: none; }
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-	content: '';
-	content: none;
-}
+  content: '';
+  content: none; }
 
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+  border-collapse: collapse;
+  border-spacing: 0; }
 
 html, body, main {
-	height: 100%;
-}
+  height: 100%; }
 
 body {
-	margin: 0;
-}
+  margin: 0; }
 
 main {
-	background-color: #f1f1f3;
-}
-
-main .content {
-	margin: 3.5rem;
-}
-
-main div.fullPage {
-	height: 100vh;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-}
-
-main .card {
-	background-color: #f1f1f3;
-	box-shadow: 0 3px 28px 0 rgba(0, 0, 0, 0.16);
-	border: none;
-}
-
-main .center {
-	margin: auto;
-}
-
-main #idCard {
-	width: 70vw;
-	height: 53vh;
-	display: flex;
-	flex-direction: row;
-}
-
-main #idCard #left {
-	width: 26vw;
-	height: 53vh;
-	background: url("/images/selfie-2.jpg") no-repeat center;
-	background-size: cover;
-}
-
-main #idCard #right {
-	display: flex;
-	width: 44vw;
-	height: 100%;
-}
-
-main #photoCard {
-	width: 100vw;
-	height: 76vh;
-	display: flex;
-	flex-direction: row;
-	overflow-y: hidden;
-	overflow-x: scroll;
-	white-space: nowrap;
-}
-
-main #photoCard #left {
-	width: 15vw;
-	height: 76vh;
-}
-
-main #photoCard img {
-	height: calc(76vh - 7rem);
-	padding-right: 3.5rem;
-}
-
-main h1 {
-	font-size: 80pt;
-	padding-bottom: 0.25rem;
-}
-
-main h2 {
-	font-size: 45pt;
-}
-
-main p {
-	font-family: "Lato", Helvetica, Arial, sans-serif;
-	color: #4A4C64;
-	font-weight: 400;
-	font-size: 15pt;
-	line-height: 135%;
-	padding-top: 0.75rem;
-	padding-bottom: 0.75rem;
-}
-
-main h1, main h2, main h3, main h4, main h5, main h6 {
-	font-family: "Lato", Helvetica, Arial, sans-serif;
-	font-weight: 900;
-	color: #4A4C64;
-}
-
-main a {
-	text-decoration: none;
-	font-weight: 600;
-	color: #292A38;
-}
-
-main #accent {
-	font: #c8c9d0;
-}
-
-main button {
-	font-family: "Lato", Helvetica, Arial, sans-serif;
-	color: #f1f1f3;
-	background-color: #D34242;
-	border: none;
-	font-size: 1rem;
-	padding: .5rem 1rem .5rem 1rem;
-}
-
-main button:hover, main button:active {
-	box-shadow: 0 3px 14px 0 rgba(0, 0, 0, 0.16);
-	background-color: #d44545;
-}
+  background-color: #f1f1f3;
+  height: 100vh; }
+  main .content {
+    margin: auto 3.5rem auto 3.5rem; }
+  main div.fullPage {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+  main .card {
+    background-color: #f1f1f3;
+    box-shadow: 0 3px 28px 0 rgba(0, 0, 0, 0.16);
+    border: none; }
+  main .center {
+    margin: auto; }
+  main #idCard {
+    width: 70vw;
+    height: 53vh;
+    display: flex;
+    flex-direction: row; }
+    main #idCard .content {
+      margin: auto 3.5rem auto 3.5rem; }
+    main #idCard #left {
+      width: 26vw;
+      height: 53vh;
+      background: url("/images/selfie-2.jpg") no-repeat center;
+      background-size: cover; }
+    main #idCard #right {
+      display: flex;
+      width: 44vw;
+      height: 100%; }
+  main #photoCard {
+    width: 100vw;
+    height: 76vh;
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    white-space: nowrap; }
+    main #photoCard .content {
+      margin: 3.5rem; }
+    main #photoCard #left {
+      width: 15vw;
+      min-width: calc(45pt * 4);
+      height: 76vh; }
+    main #photoCard img {
+      height: calc(76vh - 7rem);
+      padding-right: 3.5rem; }
+  main #footer {
+    background-color: #f1f1f3;
+    width: 10vw;
+    min-width: calc(2.25rem * 3 + 2rem);
+    height: calc(1.25rem * 2);
+    margin: calc(1.25rem * -2) auto;
+    display: flex; }
+    main #footer .content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 10vw;
+      min-width: calc(2.25rem * 3);
+      margin: auto 1rem auto 1rem; }
+    main #footer .fa {
+      color: #4A4C64;
+      font-size: 1.4rem; }
+  main h1 {
+    font-size: 80pt;
+    padding-bottom: 0.25rem; }
+  main h2 {
+    font-size: 45pt; }
+  main p {
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    color: #4A4C64;
+    font-weight: 400;
+    font-size: 15pt;
+    line-height: 135%;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem; }
+  main h1, main h2, main h3, main h4, main h5, main h6 {
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-weight: 900;
+    color: #4A4C64; }
+  main a {
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    font-weight: 600;
+    color: #292A38; }
+  main #accent {
+    font: #c8c9d0; }
+  main button {
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    color: #f1f1f3;
+    background-color: #D34242;
+    border: none;
+    font-size: 1rem;
+    margin-top: 0.75rem;
+    padding: .5rem 1rem .5rem 1rem; }
+  main button:hover, main button:active {
+    box-shadow: 0 3px 14px 0 rgba(0, 0, 0, 0.16);
+    background-color: #d44545; }
 
 ::-webkit-scrollbar {
-	width: 0;
-	background: transparent;
-}
+  width: 0;
+  background: transparent; }
 
 .fade-appear {
-	opacity: 0;
-}
+  opacity: 0; }
 
 .fade-appear.fade-appear-active {
-	opacity: 1;
-	transition: opacity 2s ease-in-out;
-}
+  opacity: 1;
+  transition: opacity 2s ease-in-out; }
 
 .fade-leave {
-	opacity: 1;
-}
+  opacity: 1; }
 
 .fade-leave.fade-leave-active {
-	opacity: 0;
-	transition: opacity 500ms ease-out;
-}
+  opacity: 0;
+  transition: opacity 500ms ease-out; }
 
 /*# sourceMappingURL=main.css.map */

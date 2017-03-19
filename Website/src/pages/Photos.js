@@ -15,50 +15,64 @@ class Photos extends Component {
 		this.filterType = this.props.match.params.type;
 	}
 
-	componentDidMount() {
-		this.setState({
-			photos: [
-				{
-					id: 1,
-					name: 'distillery-district',
-					fileName: 'distillery-district.jpg',
-					type: 'landscape'
+	updateImages() {
+		let data = [
+			{
+				id: 1,
+				name: 'distillery-district',
+				fileName: 'distillery-district.jpg',
+				type: 'landscape'
 
-				},
-				{
-					id: 2,
-					name: 'daniel-portrait',
-					fileName: 'daniel-portrait.jpg',
-					type: 'portrait'
+			},
+			{
+				id: 2,
+				name: 'daniel-portrait',
+				fileName: 'daniel-portrait.jpg',
+				type: 'portrait'
 
-				},
-				{
-					id: 3,
-					name: 'house-fire-1',
-					fileName: 'house-fire-1.jpg',
-					type: 'action'
+			},
+			{
+				id: 3,
+				name: 'house-fire-1',
+				fileName: 'house-fire-1.jpg',
+				type: 'action'
 
-				},
-				{
-					id: 4,
-					name: 'house-fire-2',
-					fileName: 'house-fire-2.jpg',
-					type: 'action'
+			},
+			{
+				id: 4,
+				name: 'house-fire-2',
+				fileName: 'house-fire-2.jpg',
+				type: 'action'
 
-				}]
-		});
+			}];
+
+		if (this.filterType) {
+			data = data.filter((obj) => {
+				return obj.type === this.filterType;
+			});
+		}
+
+		this.setState({photos: data});
 	}
 
+	componentDidMount() {
+		this.updateImages();
+	}
+
+	componentWillReceiveProps(nextProps) {
+		this.filterType = nextProps.match.params.type;
+		this.updateImages();
+	}
 
 	render() {
-		const photoNodes = this.state.photos.map(
-			(obj) => (<Photo obj={obj} key={obj.name}/>));
+		const photoNodes = this.state.photos.map((obj) => (<Photo obj={obj} key={obj.name}/>));
 
 		return (
 			<Card id="photoCard">
 				<div classID="left" id="left">
 					<Content>
 						<h2>Photos</h2>
+						<Link to="/photos">All</Link><br/>
 						<Link to="/photos/music">Music</Link><br/>
 						<Link to="/photos/portrait">Portrait</Link><br/>
 						<Link to="/photos/action">Action</Link><br/>
