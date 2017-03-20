@@ -126,6 +126,10 @@ main {
 	  font-size: 1.2rem;
 	  padding-top: 0.12rem;
 	}
+
+	a.selected > i.fa {
+	  color: $accent-colour;
+	}
   }
 
   h1 {
@@ -166,14 +170,6 @@ main {
 
   a.selected {
 	color: $accent-colour;
-  }
-
-  #footer a.selected > i.fa {
-	color: $accent-colour;
-  }
-
-  #accent {
-	font: $accent-font-colour;
   }
 
   button {
@@ -218,20 +214,12 @@ main {
 	  }
 
 	  #right {
-		display: flex;
 		width: 44vw;
-		height: 100%;
 	  }
 	}
 
 	#photoCard {
-	  width: 100vw;
 	  height: 76vh;
-	  display: flex;
-	  flex-direction: row;
-	  overflow-y: hidden;
-	  overflow-x: scroll;
-	  white-space: nowrap;
 
 	  .content {
 		margin: 3.5rem;
@@ -239,7 +227,6 @@ main {
 
 	  #left {
 		width: 15vw;
-		min-width: 280px;
 		height: 76vh;
 	  }
 
@@ -249,45 +236,8 @@ main {
 	  }
 	}
 
-	#footer {
-	  background-color: $colour-500;
-	  width: 10vw;
-	  min-width: calc(2.25rem * 6.5 + 4rem);
-	  height: calc(1.25rem * 2);
-	  margin: calc(1.25rem * -2) auto;
-	  display: flex;
-
-	  .content {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		margin: auto 0 auto 1rem;
-		padding-right: 1rem;
-	  }
-
-	  #left {
-		min-width: calc(2.25rem * 3);
-		border-right: solid $colour-100 1px;
-	  }
-
-	  #right {
-		min-width: calc(2.25rem * 3.5);
-	  }
-
-	  .fa {
-		color: $colour-200;
-		font-size: 1.4rem;
-	  }
-
-	  .fa-camera {
-		font-size: 1.2rem;
-		padding-top: 0.12rem;
-	  }
-	}
-
 	h1 {
 	  font-size: 80pt;
-	  padding-bottom: 0.25rem;
 	}
 
 	h2 {
@@ -295,34 +245,11 @@ main {
 	}
 
 	p {
-	  font-family: $body-text-font;
-	  color: $font-colour;
-	  font-weight: $font-weight;
 	  font-size: 14pt;
-	  line-height: 135%;
-	  padding-top: 0.75rem;
-	  padding-bottom: 0.75rem;
-	}
-
-	h1, h2, h3, h4, h5, h6 {
-	  font-family: $header-text-font;
-	  font-weight: $header-weight;
-	  color: $font-colour;
 	}
 
 	button {
-	  font-family: $body-text-font;
-	  color: $colour-500;
-	  background-color: $accent-colour;
-	  border: none;
-	  font-size: 1rem;
-	  margin-top: 0.75rem;
-	  padding: .5rem 1rem .5rem 1rem;
-	}
-
-	button:hover, button:active {
-	  box-shadow: 0 3px 14px 0 $shadow-colour;
-	  background-color: $accent-colour-light;
+	  margin-bottom: 0;
 	}
   }
 }
