@@ -38,3 +38,9 @@ class App extends Component {
 }
 
 export default App;
+
+//TODO: differentiate links more
+//TODO: Add text for nav (popup?)
+//TODO: Compress images
+//TODO: Highlight photo category
+//TODO:

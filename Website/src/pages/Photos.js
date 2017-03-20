@@ -21,34 +21,40 @@ class Photos extends Component {
 				id: 1,
 				name: 'distillery-district',
 				fileName: 'distillery-district.jpg',
-				type: 'landscape'
+				type: 'landscape',
+				featured: true
 
 			},
 			{
 				id: 2,
 				name: 'daniel-portrait',
 				fileName: 'daniel-portrait.jpg',
-				type: 'portrait'
-
+				type: 'portrait',
+				featured: false
 			},
 			{
 				id: 3,
 				name: 'house-fire-1',
 				fileName: 'house-fire-1.jpg',
-				type: 'action'
-
+				type: 'action',
+				featured: false
 			},
 			{
 				id: 4,
 				name: 'house-fire-2',
 				fileName: 'house-fire-2.jpg',
-				type: 'action'
-
+				type: 'action',
+				featured: true
 			}];
 
 		if (this.filterType) {
 			data = data.filter((obj) => {
+				if (this.filterType === "all") return true;
 				return obj.type === this.filterType;
+			});
+		} else {
+			data = data.filter((obj) => {
+				return obj.featured;
 			});
 		}
 
@@ -71,8 +77,8 @@ class Photos extends Component {
 			<Card id="photoCard">
 				<div classID="left" id="left">
 					<Content>
-						<h2>Photos</h2>
-						<Link to="/photos">All</Link><br/>
+						<Link to="/photos"><h2>Photos</h2></Link>
+						<Link to="/photos/all">All</Link><br/>
 						<Link to="/photos/music">Music</Link><br/>
 						<Link to="/photos/portrait">Portrait</Link><br/>
 						<Link to="/photos/action">Action</Link><br/>

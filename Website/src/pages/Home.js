@@ -13,7 +13,7 @@ class Home extends Component {
 				<div id="right">
 					<Content>
 						<h2>Hi, I'm Chase Haddleton</h2>
-						<p>I am a 18 year old Waterloo-based software developer. Five words to describe
+						<p>I am an 18 year old Waterloo-based software developer. Five words to describe
 							myself would be; leadership oriented, constant learner, and driven. I enjoys
 							challenges and love applying my knowledge to solving complex problems in
 							unique and innovative ways.
@@ -22,8 +22,8 @@ class Home extends Component {
 							I am knowledgeable in Java, JS, HTML5, CSS3 and C. I’ve worked with various
 							back-end infrastructure software including Nginx, MySQL, Node.JS, Redis and
 							Apache, and on various platforms such as Google Cloud Platform and
-							Amazon’s AWS. Sometimes I even <a href="https://github.com/chasehaddleton">
-							share my code</a>.
+							Amazon’s AWS. Some of my code is available on <a href="https://github.com/chasehaddleton">
+							GitHub</a>.
 						</p>
 						<p>
 							Currently, I am studying for my Honours Bachelors of Math in Computer Science

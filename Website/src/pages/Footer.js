@@ -7,12 +7,15 @@ class Footer extends Component {
 		super(props);
 
 		this.state = {
-			links: []
+			socialMedia: [],
+			nav: [],
+			page: ''
 		};
+		console.log(props);
 	}
 
 	componentDidMount() {
-		let data = [
+		let socialMedia = [
 			{
 				name: 'GitHub',
 				url: 'https://github.com/',
@@ -26,24 +29,60 @@ class Footer extends Component {
 
 			},
 			{
+				name: 'Instagram',
+				url: 'https://instagram.com/',
+				accountName: 'chasehaddleton'
+
+			},
+			{
 				name: 'envelope',
 				url: 'mailto:',
 				accountName: 'chase@chasehaddleton.com'
 
 			}];
 
-		this.setState({links: data});
+		let navigation = [
+			{
+				to: '',
+				icon: 'home',
+				selected: false
+			}, {
+				to: 'development',
+				icon: 'code',
+				selected: false
+			}, {
+				to: 'photos',
+				icon: 'camera',
+				selected: false
+			}
+		];
+
+		this.setState({socialMedia: socialMedia, nav: navigation});
 	}
 
 	render() {
-		const links = this.state.links.map((obj) => {
+		const navigationIcons = this.state.nav.map((obj) => {
+			let uri = '/' + obj.to;
+
+			let className = "fa fa-" + obj.icon.toLowerCase();
+
+			/*if (obj.selected) {
+				className += " active";
+			}*/
+
+			return <a href={uri} key={obj.to}><i className={className} /></a>});
+
+		const socialMediaIcons = this.state.socialMedia.map((obj) => {
 			let className = "fa fa-" + obj.name.toLowerCase();
 			return <a href={obj.url + obj.accountName} key={obj.name}><i className={className} /></a>});
 
 		return (
 			<Card id="footer">
-				<Content>
-					{links}
+				<Content id="left">
+					{navigationIcons}
+				</Content>
+				<Content id="right">
+					{socialMediaIcons}
 				</Content>
 			</Card>
 		);

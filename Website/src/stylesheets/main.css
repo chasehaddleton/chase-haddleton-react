@@ -124,11 +124,15 @@ table {
 html, body, main {
   height: 100%; }
 
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent; }
+
 body {
   margin: 0; }
 
 main {
-  background-color: #f1f1f3;
+  background-color: #c8c9d0;
   height: 100vh; }
   main .content {
     margin: auto 3.5rem auto 3.5rem; }
@@ -142,44 +146,45 @@ main {
     box-shadow: 0 3px 28px 0 rgba(0, 0, 0, 0.16);
     border: none; }
   main .center {
-    margin: auto; }
+    margin: none; }
   main #idCard {
-    width: 70vw;
-    height: 53vh;
+    width: 100vw;
+    height: calc(100vh - (1.25rem * 3));
     display: flex;
-    flex-direction: row; }
+    flex-direction: column;
+    overflow-y: scroll; }
     main #idCard .content {
-      margin: auto 3.5rem auto 3.5rem; }
+      margin: 1.5rem; }
     main #idCard #left {
-      width: 26vw;
+      width: 100vw;
       height: 53vh;
       background: url("/images/selfie-2.jpg") no-repeat center;
       background-size: cover; }
     main #idCard #right {
       display: flex;
-      width: 44vw;
+      width: 100vw;
       height: 100%; }
   main #photoCard {
     width: 100vw;
-    height: 76vh;
+    height: calc(100vh - (1.25rem * 3));
     display: flex;
     flex-direction: row;
     overflow-y: hidden;
     overflow-x: scroll;
     white-space: nowrap; }
     main #photoCard .content {
-      margin: 3.5rem; }
+      margin: 1.5rem; }
     main #photoCard #left {
       width: 15vw;
-      min-width: calc(45pt * 4);
-      height: 76vh; }
+      min-width: 280px;
+      height: calc(100vh - (1.25rem * 3)); }
     main #photoCard img {
-      height: calc(76vh - 7rem);
-      padding-right: 3.5rem; }
+      height: calc(100vh - (1.25rem * 3 + 1.5rem * 2));
+      padding-right: 1.5rem; }
   main #footer {
     background-color: #f1f1f3;
     width: 10vw;
-    min-width: calc(2.25rem * 3 + 2rem);
+    min-width: calc(2.25rem * 6.5 + 4rem);
     height: calc(1.25rem * 2);
     margin: calc(1.25rem * -2) auto;
     display: flex; }
@@ -187,22 +192,29 @@ main {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      width: 10vw;
+      margin: auto 0 auto 1rem;
+      padding-right: 1rem; }
+    main #footer #left {
       min-width: calc(2.25rem * 3);
-      margin: auto 1rem auto 1rem; }
+      border-right: solid #292A38 1px; }
+    main #footer #right {
+      min-width: calc(2.25rem * 3.5); }
     main #footer .fa {
       color: #4A4C64;
       font-size: 1.4rem; }
+    main #footer .fa-camera {
+      font-size: 1.2rem;
+      padding-top: 0.12rem; }
   main h1 {
-    font-size: 80pt;
+    font-size: 60pt;
     padding-bottom: 0.25rem; }
   main h2 {
-    font-size: 45pt; }
+    font-size: 40pt; }
   main p {
     font-family: "Lato", Helvetica, Arial, sans-serif;
     color: #4A4C64;
     font-weight: 400;
-    font-size: 15pt;
+    font-size: 13pt;
     line-height: 135%;
     padding-top: 0.75rem;
     padding-bottom: 0.75rem; }
@@ -224,15 +236,121 @@ main {
     border: none;
     font-size: 1rem;
     margin-top: 0.75rem;
-    padding: .5rem 1rem .5rem 1rem; }
+    padding: .5rem 1rem .5rem 1rem;
+    margin-bottom: 1.5rem; }
   main button:hover, main button:active {
     box-shadow: 0 3px 14px 0 rgba(0, 0, 0, 0.16);
     background-color: #d44545; }
 
-::-webkit-scrollbar {
-  width: 0;
-  background: transparent; }
-
+@media only screen and (min-width: 1824px) {
+  main {
+    background-color: #c8c9d0;
+    height: 100vh; }
+    main .content {
+      margin: auto 3.5rem auto 3.5rem; }
+    main div.fullPage {
+      height: 100vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+    main .card {
+      background-color: #f1f1f3;
+      box-shadow: 0 3px 28px 0 rgba(0, 0, 0, 0.16);
+      border: none; }
+    main .center {
+      margin: auto; }
+    main #idCard {
+      width: 70vw;
+      height: 53vh;
+      display: flex;
+      flex-direction: row; }
+      main #idCard .content {
+        margin: auto 3.5rem auto 3.5rem; }
+      main #idCard #left {
+        width: 26vw;
+        height: 53vh;
+        background: url("/images/selfie-2.jpg") no-repeat center;
+        background-size: cover; }
+      main #idCard #right {
+        display: flex;
+        width: 44vw;
+        height: 100%; }
+    main #photoCard {
+      width: 100vw;
+      height: 76vh;
+      display: flex;
+      flex-direction: row;
+      overflow-y: hidden;
+      overflow-x: scroll;
+      white-space: nowrap; }
+      main #photoCard .content {
+        margin: 3.5rem; }
+      main #photoCard #left {
+        width: 15vw;
+        min-width: 280px;
+        height: 76vh; }
+      main #photoCard img {
+        height: calc(76vh - 7rem);
+        padding-right: 3.5rem; }
+    main #footer {
+      background-color: #f1f1f3;
+      width: 10vw;
+      min-width: calc(2.25rem * 6.5 + 4rem);
+      height: calc(1.25rem * 2);
+      margin: calc(1.25rem * -2) auto;
+      display: flex; }
+      main #footer .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: auto 0 auto 1rem;
+        padding-right: 1rem; }
+      main #footer #left {
+        min-width: calc(2.25rem * 3);
+        border-right: solid #292A38 1px; }
+      main #footer #right {
+        min-width: calc(2.25rem * 3.5); }
+      main #footer .fa {
+        color: #4A4C64;
+        font-size: 1.4rem; }
+      main #footer .fa-camera {
+        font-size: 1.2rem;
+        padding-top: 0.12rem; }
+    main h1 {
+      font-size: 80pt;
+      padding-bottom: 0.25rem; }
+    main h2 {
+      font-size: 45pt; }
+    main p {
+      font-family: "Lato", Helvetica, Arial, sans-serif;
+      color: #4A4C64;
+      font-weight: 400;
+      font-size: 14pt;
+      line-height: 135%;
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem; }
+    main h1, main h2, main h3, main h4, main h5, main h6 {
+      font-family: "Lato", Helvetica, Arial, sans-serif;
+      font-weight: 900;
+      color: #4A4C64; }
+    main a {
+      font-family: "Lato", Helvetica, Arial, sans-serif;
+      text-decoration: none;
+      font-weight: 600;
+      color: #292A38; }
+    main #accent {
+      font: #c8c9d0; }
+    main button {
+      font-family: "Lato", Helvetica, Arial, sans-serif;
+      color: #f1f1f3;
+      background-color: #D34242;
+      border: none;
+      font-size: 1rem;
+      margin-top: 0.75rem;
+      padding: .5rem 1rem .5rem 1rem; }
+    main button:hover, main button:active {
+      box-shadow: 0 3px 14px 0 rgba(0, 0, 0, 0.16);
+      background-color: #d44545; } }
 .fade-appear {
   opacity: 0; }
 
