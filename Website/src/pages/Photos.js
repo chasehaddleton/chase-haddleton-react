@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import Card from "../components/Card";
-import {Link} from "react-router-dom";
+import {NavLink, Link} from "react-router-dom";
 import Content from "../components/Content";
 import Photo from "../components/Photo";
 
@@ -72,18 +72,18 @@ class Photos extends Component {
 
 	render() {
 		const photoNodes = this.state.photos.map((obj) => (<Photo obj={obj} key={obj.name}/>));
+		const links = ["All", "Music", "Portrait", "Action", "Landscape", "Other"].map(
+			(uri) => {
+				let link = "/photos/" + uri.toLocaleLowerCase();
+				return (<div key={uri}><NavLink to={link} activeClassName="selected">{uri}</NavLink><br /></div>);
+			});
 
 		return (
 			<Card id="photoCard">
 				<div classID="left" id="left">
 					<Content>
 						<Link to="/photos"><h2>Photos</h2></Link>
-						<Link to="/photos/all">All</Link><br/>
-						<Link to="/photos/music">Music</Link><br/>
-						<Link to="/photos/portrait">Portrait</Link><br/>
-						<Link to="/photos/action">Action</Link><br/>
-						<Link to="/photos/landscape">Landscape</Link><br/>
-						<Link to="/photos/other">Other</Link>
+						{links}
 					</Content>
 				</div>
 				<Content>

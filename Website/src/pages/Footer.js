@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import Card from "../components/Card";
 import Content from "../components/Content";
+import {NavLink} from "react-router-dom";
 
 class Footer extends Component {
 	constructor(props) {
@@ -11,7 +12,6 @@ class Footer extends Component {
 			nav: [],
 			page: ''
 		};
-		console.log(props);
 	}
 
 	componentDidMount() {
@@ -70,7 +70,7 @@ class Footer extends Component {
 				className += " active";
 			}*/
 
-			return <a href={uri} key={obj.to}><i className={className} /></a>});
+			return <NavLink exact to={uri} key={obj.to} activeClassName="selected"><i className={className} /></NavLink>});
 
 		const socialMediaIcons = this.state.socialMedia.map((obj) => {
 			let className = "fa fa-" + obj.name.toLowerCase();

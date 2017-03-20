@@ -157,7 +157,19 @@ main {
 	font-family: $body-text-font;
 	text-decoration: none;
 	font-weight: 600;
-	color: $colour-100;
+	color: $colour-200;
+  }
+
+  p a {
+	color: $accent-colour;
+  }
+
+  a.selected {
+	color: $accent-colour;
+  }
+
+  #footer a.selected > i.fa {
+	color: $accent-colour;
   }
 
   #accent {
@@ -187,26 +199,6 @@ main {
 
 @media only screen and (min-width: 1824px) {
   main {
-	background-color: $colour-400;
-	height: 100vh;
-
-	.content {
-	  margin: auto 3.5rem auto 3.5rem;
-	}
-
-	div.fullPage {
-	  height: 100vh;
-	  display: flex;
-	  flex-direction: row;
-	  justify-content: space-between;
-	}
-
-	.card {
-	  background-color: $colour-500;
-	  box-shadow: 0 3px 28px 0 $shadow-colour;
-	  border: none;
-	}
-
 	.center {
 	  margin: auto;
 	}
@@ -214,7 +206,6 @@ main {
 	#idCard {
 	  width: 70vw;
 	  height: 53vh;
-	  display: flex;
 	  flex-direction: row;
 
 	  .content {
@@ -224,8 +215,6 @@ main {
 	  #left {
 		width: 26vw;
 		height: 53vh;
-		background: url("/images/selfie-2.jpg") no-repeat center;
-		background-size: cover;
 	  }
 
 	  #right {
@@ -319,17 +308,6 @@ main {
 	  font-family: $header-text-font;
 	  font-weight: $header-weight;
 	  color: $font-colour;
-	}
-
-	a {
-	  font-family: $body-text-font;
-	  text-decoration: none;
-	  font-weight: 600;
-	  color: $colour-100;
-	}
-
-	#accent {
-	  font: $accent-font-colour;
 	}
 
 	button {
