@@ -12,7 +12,7 @@ class NoMatch extends Component {
 					<p>
 						Looks like the page you requested doesn't exist!
 					</p>
-					<p>Wanna go back?</p>
+					<p>Wanna go to home?</p>
 					<Link to="/">
 						<button>Home</button>
 					</Link>

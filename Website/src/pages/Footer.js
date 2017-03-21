@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import Card from "../components/Card";
 import Content from "../components/Content";
 import {NavLink} from "react-router-dom";
+import {navigationLinks, socialMediaLinks} from "../components/Config";
 
 class Footer extends Component {
 	constructor(props) {
@@ -15,49 +16,7 @@ class Footer extends Component {
 	}
 
 	componentDidMount() {
-		let socialMedia = [
-			{
-				name: 'GitHub',
-				url: 'https://github.com/',
-				accountName: 'chasehaddleton'
-
-			},
-			{
-				name: 'LinkedIn',
-				url: 'https://ca.linkedin.com/in/',
-				accountName: 'chasehaddleton'
-
-			},
-			{
-				name: 'Instagram',
-				url: 'https://instagram.com/',
-				accountName: 'chasehaddleton'
-
-			},
-			{
-				name: 'envelope',
-				url: 'mailto:',
-				accountName: 'chase@chasehaddleton.com'
-
-			}];
-
-		let navigation = [
-			{
-				to: '',
-				icon: 'home',
-				selected: false
-			}, {
-				to: 'development',
-				icon: 'code',
-				selected: false
-			}, {
-				to: 'photos',
-				icon: 'camera',
-				selected: false
-			}
-		];
-
-		this.setState({socialMedia: socialMedia, nav: navigation});
+		this.setState({socialMedia: socialMediaLinks, nav: navigationLinks});
 	}
 
 	render() {
@@ -66,15 +25,18 @@ class Footer extends Component {
 
 			let className = "fa fa-" + obj.icon.toLowerCase();
 
-			/*if (obj.selected) {
-				className += " active";
-			}*/
-
-			return <NavLink exact to={uri} key={obj.to} activeClassName="selected"><i className={className} /></NavLink>});
+			if (uri === '/') {
+				return <NavLink exact to={uri} key={obj.to} activeClassName="selected"><i
+					className={className}/></NavLink>;
+			} else {
+				return <NavLink to={uri} key={obj.to} activeClassName="selected"><i className={className}/></NavLink>;
+			}
+		});
 
 		const socialMediaIcons = this.state.socialMedia.map((obj) => {
 			let className = "fa fa-" + obj.name.toLowerCase();
-			return <a href={obj.url + obj.accountName} key={obj.name}><i className={className} /></a>});
+			return <a href={obj.url + obj.accountName} key={obj.name}><i className={className}/></a>
+		});
 
 		return (
 			<Card id="footer">

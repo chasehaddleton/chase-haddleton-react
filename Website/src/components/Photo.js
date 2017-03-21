@@ -1,14 +1,13 @@
 import React from "react";
+import {staticContentURI} from './Config';
 
 class Photo extends React.Component {
 	constructor(props) {
 		super(props);
 
-		this.imagePath = '/images/';
-
 		this.state = {
 			name: props.obj.name,
-			fileName: this.imagePath + props.obj.fileName,
+			fileName: staticContentURI + "/images/" +props.obj.fileName,
 			type: props.obj.type
 		};
 	}

@@ -3,6 +3,7 @@ import Card from "../components/Card";
 import {NavLink, Link} from "react-router-dom";
 import Content from "../components/Content";
 import Photo from "../components/Photo";
+import {imageData} from '../components/Config';
 
 class Photos extends Component {
 	constructor(props) {
@@ -16,36 +17,7 @@ class Photos extends Component {
 	}
 
 	updateImages() {
-		let data = [
-			{
-				id: 1,
-				name: 'distillery-district',
-				fileName: 'distillery-district.jpg',
-				type: 'landscape',
-				featured: true
-
-			},
-			{
-				id: 2,
-				name: 'daniel-portrait',
-				fileName: 'daniel-portrait.jpg',
-				type: 'portrait',
-				featured: false
-			},
-			{
-				id: 3,
-				name: 'house-fire-1',
-				fileName: 'house-fire-1.jpg',
-				type: 'action',
-				featured: false
-			},
-			{
-				id: 4,
-				name: 'house-fire-2',
-				fileName: 'house-fire-2.jpg',
-				type: 'action',
-				featured: true
-			}];
+		let data = imageData;
 
 		if (this.filterType) {
 			data = data.filter((obj) => {
@@ -83,7 +55,9 @@ class Photos extends Component {
 				<div classID="left" id="left">
 					<Content>
 						<Link to="/photos"><h2>Photos</h2></Link>
-						{links}
+						<div className="links">
+							{links}
+						</div>
 					</Content>
 				</div>
 				<Content>

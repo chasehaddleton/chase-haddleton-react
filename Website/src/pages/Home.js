@@ -2,9 +2,11 @@ import React, {Component} from "react";
 import {Link} from "react-router-dom";
 import Card from "../components/Card";
 import Content from "../components/Content";
+import {staticContentURI} from "../components/Config";
 
 class Home extends Component {
 	render() {
+		let resumeURI = staticContentURI + "/files/chase-haddleton-resume.pdf";
 		return (
 			<Card id="idCard">
 				<div id="left">
@@ -14,7 +16,7 @@ class Home extends Component {
 					<Content>
 						<h2>Hi, I'm Chase Haddleton</h2>
 						<p>I am an 18 year old Waterloo-based software developer. Five words to describe
-							myself would be; leadership oriented, constant learner, and driven. I enjoys
+							myself would be; leadership oriented, constant learner, and driven. I enjoy
 							challenges and love applying my knowledge to solving complex problems in
 							unique and innovative ways.
 						</p>
@@ -31,7 +33,7 @@ class Home extends Component {
 							FIRST Robotics Competition Team D.A.V.E. In my free time, I take&nbsp;
 							<Link to="/photos">photos</Link> and help moderate the LinusTechTips forum.
 						</p>
-						<a href="/files/chase-haddleton-resume.pdf">
+						<a href={resumeURI}>
 							<button>My Resume</button>
 						</a>
 					</Content>
