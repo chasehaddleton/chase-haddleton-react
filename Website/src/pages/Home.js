@@ -5,6 +5,10 @@ import Content from "../components/Content";
 import {staticContentURI} from "../components/Config";
 
 class Home extends Component {
+	shouldComponentUpdate(nextProps, nextState) {
+		return false;
+	}
+	
 	render() {
 		let resumeURI = staticContentURI + "/files/chase-haddleton-resume.pdf";
 		return (
@@ -24,8 +28,7 @@ class Home extends Component {
 							I am knowledgeable in Java, JS, HTML5, CSS3 and C. I’ve worked with various
 							back-end infrastructure software including Nginx, MySQL, Node.JS, Redis and
 							Apache, and on various platforms such as Google Cloud Platform and
-							Amazon’s AWS. Some of my code is available on <a href="https://github.com/chasehaddleton">
-							GitHub</a>.
+							Amazon’s AWS. Check out some of my <Link to="/projects">Projects</Link>!
 						</p>
 						<p>
 							Currently, I am studying for my Honours Bachelors of Math in Computer Science

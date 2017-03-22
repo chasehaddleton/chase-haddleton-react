@@ -146,7 +146,7 @@ main {
     box-shadow: 0 3px 28px 0 rgba(0, 0, 0, 0.16);
     border: none; }
   main .center {
-    margin: none; }
+    margin: 0; }
   main #idCard {
     width: 100vw;
     height: calc(100vh - (1.25rem * 3));
@@ -179,13 +179,16 @@ main {
     main #photoCard div.links {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: space-around;
       flex-wrap: wrap; }
     main #photoCard img {
       width: calc(100vw - 3rem); }
   main #projectCard {
     width: 100vw;
-    height: calc(100vh - (1.25rem * 3)); }
+    height: calc(100vh - (1.25rem * 3));
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll; }
     main #projectCard .content {
       margin: 1.5rem; }
     main #projectCard #top {
@@ -271,6 +274,42 @@ main {
       height: 66vh; }
     main #idCard #right {
       width: 57vw; }
+  main #photoCard {
+    height: 76vh;
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    white-space: nowrap; }
+    main #photoCard .content {
+      margin: 3.5rem; }
+    main #photoCard #left {
+      width: 15vw;
+      min-width: 280px;
+      height: 76vh; }
+    main #photoCard #left > .content {
+      margin-bottom: 3.5rem; }
+    main #photoCard div.links {
+      display: inherit; }
+    main #photoCard img {
+      height: calc(76vh - 7rem);
+      width: auto;
+      padding-right: 3.5rem; }
+  main #projectCard {
+    height: 76vh;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    white-space: nowrap; }
+    main #projectCard .content {
+      margin: 3.5rem; }
+    main #projectCard #bottom {
+      display: flex;
+      flex-direction: row; }
+    main #projectCard div.project {
+      width: 20vw;
+      height: calc(76vh - 7rem);
+      white-space: normal;
+      padding-right: 3.5rem; }
   main button {
     margin-bottom: 0; } }
 @media only screen and (min-width: 1424px) {
@@ -287,12 +326,6 @@ main {
       height: 62vh; }
     main #idCard #right {
       width: 52vw; }
-  main h1 {
-    font-size: 80pt; }
-  main h2 {
-    font-size: 45pt; }
-  main p {
-    font-size: 14pt; }
   main button {
     margin-bottom: 0; } }
 @media only screen and (min-width: 1750px) {
@@ -320,6 +353,7 @@ main {
       margin: 3.5rem; }
     main #photoCard #left {
       width: 15vw;
+      min-width: auto;
       height: 76vh; }
     main #photoCard #left > .content {
       margin-bottom: 3.5rem; }
