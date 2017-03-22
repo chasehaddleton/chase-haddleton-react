@@ -183,6 +183,15 @@ main {
       flex-wrap: wrap; }
     main #photoCard img {
       width: calc(100vw - 3rem); }
+  main #projectCard {
+    width: 100vw;
+    height: calc(100vh - (1.25rem * 3)); }
+    main #projectCard .content {
+      margin: 1.5rem; }
+    main #projectCard #top {
+      width: 100vw; }
+    main #projectCard #top > .content {
+      margin-bottom: 0; }
   main #footer {
     background-color: #f1f1f3;
     width: 10vw;
@@ -248,7 +257,45 @@ main {
     box-shadow: 0 3px 14px 0 rgba(0, 0, 0, 0.16);
     background-color: #d44545; }
 
-@media only screen and (min-width: 1824px) {
+@media only screen and (min-width: 1024px) {
+  main .center {
+    margin: auto; }
+  main #idCard {
+    width: 83vw;
+    height: 66vh;
+    flex-direction: row; }
+    main #idCard .content {
+      margin: auto 2.5rem auto 2.5rem; }
+    main #idCard #left {
+      width: 26vw;
+      height: 66vh; }
+    main #idCard #right {
+      width: 57vw; }
+  main button {
+    margin-bottom: 0; } }
+@media only screen and (min-width: 1424px) {
+  main .center {
+    margin: auto; }
+  main #idCard {
+    width: 78vw;
+    height: 62vh;
+    flex-direction: row; }
+    main #idCard .content {
+      margin: auto 3rem auto 3rem; }
+    main #idCard #left {
+      width: 26vw;
+      height: 62vh; }
+    main #idCard #right {
+      width: 52vw; }
+  main h1 {
+    font-size: 80pt; }
+  main h2 {
+    font-size: 45pt; }
+  main p {
+    font-size: 14pt; }
+  main button {
+    margin-bottom: 0; } }
+@media only screen and (min-width: 1750px) {
   main .center {
     margin: auto; }
   main #idCard {
@@ -281,6 +328,21 @@ main {
     main #photoCard img {
       height: calc(76vh - 7rem);
       width: auto;
+      padding-right: 3.5rem; }
+  main #projectCard {
+    height: 76vh;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    white-space: nowrap; }
+    main #projectCard .content {
+      margin: 3.5rem; }
+    main #projectCard #bottom {
+      display: flex;
+      flex-direction: row; }
+    main #projectCard div.project {
+      width: 20vw;
+      height: calc(76vh - 7rem);
+      white-space: normal;
       padding-right: 3.5rem; }
   main h1 {
     font-size: 80pt; }

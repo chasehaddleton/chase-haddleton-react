@@ -7,14 +7,14 @@ class Photo extends React.Component {
 
 		this.state = {
 			name: props.obj.name,
-			fileName: staticContentURI + "/images/" +props.obj.fileName,
+			uri: staticContentURI + "/images/" + props.obj.fileName,
 			type: props.obj.type
 		};
 	}
 
 	render() {
-		return <img src={this.state.fileName} className="photo" classID={this.state.name} id={this.state.name}
-		            key={this.state.name} alt={this.state.fileName}/>;
+		return <img src={this.state.uri} className="photo" classID={this.state.name} id={this.state.name}
+		            key={this.state.name} alt={this.state.uri}/>;
 	}
 }
 
