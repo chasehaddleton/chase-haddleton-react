@@ -23,9 +23,7 @@ class Projects extends Component {
 	}
 
 	render() {
-		console.log(this.state.projects);
 		const projectNodes = this.state.projects.map((obj) => (<Project obj={obj} key={obj.name}/>));
-		console.log(projectNodes);
 
 		return (
 			<Card id="projectCard">
