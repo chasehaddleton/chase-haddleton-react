@@ -194,16 +194,19 @@ exports.projectData = [
 		description: "Robot designed to compete in the 2016 FIRST Robotics Competition. " +
 		" Managed a 6000 line Java application between two development teams with the use of GitHub. " +
 		" Taught 9th, 10th, and 11th graders Java programming.",
-		externalUri: "https://github.com/riverdalerobotics/2016-Season"
+		externalUri: "https://github.com/riverdalerobotics/2016-Season",
+		imageURI: ""
 	}, {
 		name: 'Travlr',
 		description: "Travel companion app that gives tailored recommendations of things to do and places to see. " +
 		"Designed application’s Google Cloud Platform end infrastructure. " +
 		"Created REST micro-service architecture with Node.js and MongoDB.",
-		externalUri: "https://github.com/chasehaddleton/travlr"
+		externalUri: "https://github.com/chasehaddleton/travlr",
+		imageURI: ""
 	}, {
 		name: 'Smart Alarm Clock',
 		description: "Internet connected alarm clock which connects to Gmail and weather networks to give personalized data to users. " +
 		"Utilizes Java and JavaFX, OpenWeatherMap API, Google Authentication API.",
-		externalUri: "https://github.com/chasehaddleton/smart-alarm-clock"
+		externalUri: "https://github.com/chasehaddleton/smart-alarm-clock",
+		imageURI: ""
 	}];

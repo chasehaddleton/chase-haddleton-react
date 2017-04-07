@@ -135,7 +135,7 @@ main {
   background-color: #c8c9d0;
   height: 100vh; }
   main .content {
-    margin: auto calc(14pt * 1.6 * .5) auto calc(14pt * 1.6 * .5); }
+    margin: auto 11.2pt auto 11.2pt; }
   main div.fullPage {
     height: 100vh;
     display: flex;
@@ -154,7 +154,7 @@ main {
     flex-direction: column;
     overflow-y: scroll; }
     main #idCard .content {
-      margin: calc(14pt * 1.6); }
+      margin: 22.4pt; }
     main #idCard #left {
       width: 100vw;
       height: 53vh;
@@ -171,7 +171,7 @@ main {
     flex-direction: column;
     overflow-y: scroll; }
     main #photoCard .content {
-      margin: calc(14pt * 1.6); }
+      margin: 22.4pt; }
     main #photoCard #left, main #photoCard #right {
       width: 100vw; }
     main #photoCard #left > .content {
@@ -182,8 +182,8 @@ main {
       justify-content: space-around;
       flex-wrap: wrap; }
     main #photoCard img {
-      width: calc(100vw - (14pt * 1.6 * 2));
-      padding-bottom: calc(14pt * 1.6 * .5); }
+      width: calc(100vw - 44.8pt);
+      padding-bottom: 11.2pt; }
   main #projectCard {
     width: 100vw;
     height: calc(100vh - (1.25rem * 3));
@@ -191,7 +191,7 @@ main {
     flex-direction: column;
     overflow-y: scroll; }
     main #projectCard .content {
-      margin: calc(14pt * 1.6); }
+      margin: 22.4pt; }
     main #projectCard #top {
       width: 100vw; }
     main #projectCard #top > .content {
@@ -223,41 +223,49 @@ main {
     main #footer a.selected > i.fa {
       color: #D34242; }
   main h2 {
-    font-size: calc(14pt * 3);
-    line-height: calc(14pt * 1.6 * 2.25);
-    padding-bottom: calc(14pt * 1.6); }
+    font-size: 35.84pt;
+    line-height: 44.8pt;
+    padding-bottom: 11.2pt; }
   main p {
     font-family: "Lato", Helvetica, Arial, sans-serif;
     color: #4A4C64;
     font-weight: 400;
-    line-height: calc(100% * 1.6);
+    line-height: 22.4pt;
     font-size: 14pt;
-    padding-bottom: calc(14pt * 1.6); }
+    padding-bottom: 22.4pt; }
   main h1, main h2, main h3, main h4, main h5, main h6 {
     font-family: "Lato", Helvetica, Arial, sans-serif;
     font-weight: 900;
     color: #4A4C64; }
+  main h3 {
+    font-size: 22.4pt;
+    line-height: 35.84pt; }
   main a {
     font-family: "Lato", Helvetica, Arial, sans-serif;
     text-decoration: none;
     font-weight: 600;
     color: #4A4C64; }
-  main p a {
-    color: #D34242; }
+  main p a, main .header > a > h3 {
+    color: #888999; }
   main a.selected {
     color: #D34242; }
+  main a:active, main a:hover {
+    color: #4A4C64; }
+  main div.links > div > a {
+    font-size: 14pt;
+    line-height: calc(22.4pt); }
   main button {
     font-family: "Lato", Helvetica, Arial, sans-serif;
     color: #f1f1f3;
-    background-color: #D34242;
+    background-color: #888999;
     border: none;
     font-size: 12pt;
-    line-height: 100 * 1.6;
+    line-height: 22.4pt;
     padding: calc(12pt * 1.6 * .25) calc(12pt * 1.6 * .5) calc(12pt * 1.6 * .25) calc(12pt * 1.6 * .5);
     margin-bottom: calc(12pt * 1.6); }
   main button:hover, main button:active {
     box-shadow: 0 3px 14px 0 rgba(0, 0, 0, 0.16);
-    background-color: #d44545; }
+    background-color: #292A38; }
 
 @media only screen and (min-width: 900px) {
   main .center {
@@ -267,7 +275,7 @@ main {
     width: 100vw;
     flex-direction: row; }
     main #idCard .content {
-      margin: auto calc(14pt * 1.6 * 2) auto calc(14pt * 1.6 * 2); }
+      margin: auto 44.8pt auto 44.8pt; }
     main #idCard #left {
       width: 34vw;
       height: 76vh; }
@@ -281,19 +289,19 @@ main {
     overflow-x: scroll;
     white-space: nowrap; }
     main #photoCard .content {
-      margin: calc(14pt * 1.6 * 2); }
+      margin: 44.8pt; }
     main #photoCard #left {
       width: 15vw;
       min-width: 280px;
       height: 76vh; }
     main #photoCard #left > .content {
-      margin-bottom: calc(14pt * 1.6 * 2); }
+      margin-bottom: 44.8pt; }
     main #photoCard div.links {
       display: inherit; }
     main #photoCard img {
-      height: calc(76vh - calc(14pt * 1.6 * 4));
+      height: calc(76vh - 89.6pt);
       width: auto;
-      padding-right: calc(14pt * 1.6);
+      padding-right: 22.4pt;
       padding-bottom: 0; }
   main #projectCard {
     height: 76vh;
@@ -301,15 +309,15 @@ main {
     overflow-x: scroll;
     white-space: nowrap; }
     main #projectCard .content {
-      margin: calc(14pt * 1.6 * 2); }
+      margin: 44.8pt; }
     main #projectCard #bottom {
       display: flex;
       flex-direction: row; }
     main #projectCard div.project {
       width: 33vw;
-      height: calc(76vh - calc(14pt * 1.6 * 4));
+      height: calc(76vh - 89.6pt);
       white-space: normal;
-      padding-right: calc(14pt * 1.6 * 2); }
+      padding-right: 44.8pt; }
   main button {
     margin-bottom: 0; } }
 @media only screen and (min-width: 1400px) {
@@ -320,10 +328,7 @@ main {
       width: 26vw;
       height: 62vh; }
     main #idCard #right {
-      width: 52vw; }
-  main h2 {
-    line-height: calc(14pt * 1.6 * 3);
-    padding-bottom: 0; } }
+      width: 52vw; } }
 @media only screen and (min-width: 1900px) {
   main #idCard {
     width: 70vw;

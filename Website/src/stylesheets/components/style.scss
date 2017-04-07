@@ -1,3 +1,9 @@
+@import "modularscale";
+
+$modularscale: (
+		base: 14pt,
+		ratio: 1.6
+);
 $header-text-font: "Lato", Helvetica, Arial, sans-serif;
 $body-text-font: $header-text-font;
 $colour-100: #292A38;
@@ -12,7 +18,7 @@ $font-colour: $colour-200;
 $accent-font-colour: $colour-400;
 $header-weight: 900;
 $font-weight: 400;
-$font-size: 14pt;
+//$font-size: ms(0);
 $leading-factor: 1.6;
 
 body {
@@ -24,7 +30,7 @@ main {
   height: 100vh;
 
   .content {
-	margin: auto calc(#{$font-size} * #{$leading-factor} * .5) auto calc(#{$font-size} * #{$leading-factor} * .5);
+	margin: auto #{ms(1) * .5} auto #{ms(1) * .5};
   }
 
   div.fullPage {
@@ -52,7 +58,7 @@ main {
 	overflow-y: scroll;
 
 	.content {
-	  margin: calc(#{$font-size} * #{$leading-factor});
+	  margin: ms(1);
 	}
 
 	#left {
@@ -77,7 +83,7 @@ main {
 	overflow-y: scroll;
 
 	.content {
-	  margin: calc(#{$font-size} * #{$leading-factor});
+	  margin: ms(1);
 	}
 
 	#left, #right {
@@ -96,8 +102,8 @@ main {
 	}
 
 	img {
-	  width: calc(100vw - (#{$font-size} * #{$leading-factor} * 2));
-	  padding-bottom: calc(#{$font-size} * #{$leading-factor} * .5);
+	  width: calc(100vw - #{ms(1)* 2});
+	  padding-bottom: #{ms(1) * .5};
 	}
   }
 
@@ -109,7 +115,7 @@ main {
 	overflow-y: scroll;
 
 	.content {
-	  margin: calc(#{$font-size} * #{$leading-factor});
+	  margin: ms(1);
 	}
 
 	#top {
@@ -162,24 +168,29 @@ main {
   }
 
   h2 {
-	font-size: calc(#{$font-size} * 3);
-	line-height: calc(#{$font-size} * #{$leading-factor} * 2.25);
-	padding-bottom: calc(#{$font-size} * #{$leading-factor});
+	font-size: ms(2);
+	line-height: #{ms(1) * 2};
+	padding-bottom: #{ms(1) * .5};
   }
 
   p {
 	font-family: $body-text-font;
 	color: $font-colour;
 	font-weight: $font-weight;
-	line-height: calc(100% * #{$leading-factor});
-	font-size: $font-size;
-	padding-bottom: calc(14pt * #{$leading-factor});
+	line-height: ms(1);
+	font-size: ms(0);
+	padding-bottom: ms(1);
   }
 
   h1, h2, h3, h4, h5, h6 {
 	font-family: $header-text-font;
 	font-weight: $header-weight;
 	color: $font-colour;
+  }
+
+  h3 {
+	font-size: ms(1);
+	line-height: ms(2);
   }
 
   a {
@@ -189,28 +200,37 @@ main {
 	color: $colour-200;
   }
 
-  p a {
-	color: $accent-colour;
+  p a, .header > a > h3 {
+	color: $colour-300;
   }
 
   a.selected {
 	color: $accent-colour;
   }
 
+  a:active, a:hover {
+	color: $colour-200;
+  }
+
+  div.links > div > a {
+	font-size: ms(0);
+	line-height: calc(#{ms(1)});
+  }
+
   button {
 	font-family: $body-text-font;
 	color: $colour-500;
-	background-color: $accent-colour;
+	background-color: $colour-300;
 	border: none;
 	font-size: 12pt;
-	line-height: 100 * #{$leading-factor};
+	line-height: ms(1);
 	padding: calc(12pt * #{$leading-factor} * .25) calc(12pt * #{$leading-factor} * .5) calc(12pt * #{$leading-factor} * .25) calc(12pt * #{$leading-factor} * .5);
 	margin-bottom: calc(12pt * #{$leading-factor});
   }
 
   button:hover, button:active {
 	box-shadow: 0 3px 14px 0 $shadow-colour;
-	background-color: $accent-colour-light;
+	background-color: $colour-100;
   }
 }
 
@@ -226,7 +246,7 @@ main {
 	  flex-direction: row;
 
 	  .content {
-		margin: auto calc(#{$font-size} * #{$leading-factor} * 2) auto calc(#{$font-size} * #{$leading-factor} * 2);
+		margin: auto #{ms(1) * 2} auto #{ms(1) * 2};
 	  }
 
 	  #left {
@@ -248,7 +268,7 @@ main {
 	  white-space: nowrap;
 
 	  .content {
-		margin: calc(#{$font-size} * #{$leading-factor} * 2);
+		margin: #{ms(1) * 2};
 	  }
 
 	  #left {
@@ -258,7 +278,7 @@ main {
 	  }
 
 	  #left > .content {
-		margin-bottom: calc(#{$font-size} * #{$leading-factor} * 2);
+		margin-bottom: #{ms(1) * 2};
 	  }
 
 	  div.links {
@@ -266,9 +286,9 @@ main {
 	  }
 
 	  img {
-		height: calc(76vh - calc(#{$font-size} * #{$leading-factor} * 4));
+		height: calc(76vh - #{ms(1) * 4});
 		width: auto;
-		padding-right: calc(#{$font-size} * #{$leading-factor});
+		padding-right: ms(1);
 		padding-bottom: 0;
 	  }
 	}
@@ -280,7 +300,7 @@ main {
 	  white-space: nowrap;
 
 	  .content {
-		margin: calc(#{$font-size} * #{$leading-factor} * 2);
+		margin: #{ms(1) * 2};
 	  }
 
 	  #bottom {
@@ -290,9 +310,9 @@ main {
 
 	  div.project {
 		width: 33vw;
-		height: calc(76vh - calc(#{$font-size} * #{$leading-factor} * 4));
+		height: calc(76vh - #{ms(1) * 4});
 		white-space: normal;
-		padding-right: calc(#{$font-size} * #{$leading-factor} * 2);
+		padding-right: #{ms(1) * 2};
 	  }
 	}
 
@@ -316,11 +336,6 @@ main {
 	  #right {
 		width: 52vw;
 	  }
-	}
-
-	h2 {
-	  line-height: calc(#{$font-size} * #{$leading-factor} * 3);
-	  padding-bottom: 0;
 	}
   }
 }
