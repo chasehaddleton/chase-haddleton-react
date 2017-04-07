@@ -41,7 +41,3 @@ class App extends Component {
 }
 
 export default App;
-
-//TODO: Add text for nav (popup?)
-//TODO: Compress images
-//TODO: Fix rough break points
