@@ -12,6 +12,8 @@ $font-colour: $colour-200;
 $accent-font-colour: $colour-400;
 $header-weight: 900;
 $font-weight: 400;
+$font-size: 14pt;
+$leading-factor: 1.6;
 
 body {
   margin: 0;
@@ -22,7 +24,7 @@ main {
   height: 100vh;
 
   .content {
-	margin: auto 3.5rem auto 3.5rem;
+	margin: auto calc(#{$font-size} * #{$leading-factor} * .5) auto calc(#{$font-size} * #{$leading-factor} * .5);
   }
 
   div.fullPage {
@@ -50,7 +52,7 @@ main {
 	overflow-y: scroll;
 
 	.content {
-	  margin: 1.5rem;
+	  margin: calc(#{$font-size} * #{$leading-factor});
 	}
 
 	#left {
@@ -75,10 +77,10 @@ main {
 	overflow-y: scroll;
 
 	.content {
-	  margin: 1.5rem;
+	  margin: calc(#{$font-size} * #{$leading-factor});
 	}
 
-	#left {
+	#left, #right {
 	  width: 100vw;
 	}
 
@@ -94,7 +96,8 @@ main {
 	}
 
 	img {
-	  width: calc(100vw - 3rem);
+	  width: calc(100vw - (#{$font-size} * #{$leading-factor} * 2));
+	  padding-bottom: calc(#{$font-size} * #{$leading-factor} * .5);
 	}
   }
 
@@ -106,7 +109,7 @@ main {
 	overflow-y: scroll;
 
 	.content {
-	  margin: 1.5rem;
+	  margin: calc(#{$font-size} * #{$leading-factor});
 	}
 
 	#top {
@@ -114,7 +117,7 @@ main {
 	}
 
 	#top > .content {
-		margin-bottom: 0;
+	  margin-bottom: 0;
 	}
   }
 
@@ -158,23 +161,19 @@ main {
 	}
   }
 
-  h1 {
-	font-size: 60pt;
-	padding-bottom: 0.25rem;
-  }
-
   h2 {
-	font-size: 40pt;
+	font-size: calc(#{$font-size} * 3);
+	line-height: calc(#{$font-size} * #{$leading-factor} * 2.25);
+	padding-bottom: calc(#{$font-size} * #{$leading-factor});
   }
 
   p {
 	font-family: $body-text-font;
 	color: $font-colour;
 	font-weight: $font-weight;
-	font-size: 13pt;
-	line-height: 135%;
-	padding-top: 0.75rem;
-	padding-bottom: 0.75rem;
+	line-height: calc(100% * #{$leading-factor});
+	font-size: $font-size;
+	padding-bottom: calc(14pt * #{$leading-factor});
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -203,10 +202,10 @@ main {
 	color: $colour-500;
 	background-color: $accent-colour;
 	border: none;
-	font-size: 1rem;
-	margin-top: 0.75rem;
-	padding: .5rem 1rem .5rem 1rem;
-	margin-bottom: 1.5rem;
+	font-size: 12pt;
+	line-height: 100 * #{$leading-factor};
+	padding: calc(12pt * #{$leading-factor} * .25) calc(12pt * #{$leading-factor} * .5) calc(12pt * #{$leading-factor} * .25) calc(12pt * #{$leading-factor} * .5);
+	margin-bottom: calc(12pt * #{$leading-factor});
   }
 
   button:hover, button:active {
@@ -215,28 +214,28 @@ main {
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 900px) {
   main {
 	.center {
 	  margin: auto;
 	}
 
 	#idCard {
-	  width: 83vw;
-	  height: 66vh;
+	  height: 76vh;
+	  width: 100vw;
 	  flex-direction: row;
 
 	  .content {
-		margin: auto 2.5rem auto 2.5rem;
+		margin: auto calc(#{$font-size} * #{$leading-factor} * 2) auto calc(#{$font-size} * #{$leading-factor} * 2);
 	  }
 
 	  #left {
-		width: 26vw;
-		height: 66vh;
+		width: 34vw;
+		height: 76vh;
 	  }
 
 	  #right {
-		width: 57vw;
+		width: 66vw;
 	  }
 	}
 
@@ -249,7 +248,7 @@ main {
 	  white-space: nowrap;
 
 	  .content {
-		margin: 3.5rem;
+		margin: calc(#{$font-size} * #{$leading-factor} * 2);
 	  }
 
 	  #left {
@@ -259,7 +258,7 @@ main {
 	  }
 
 	  #left > .content {
-		margin-bottom: 3.5rem;
+		margin-bottom: calc(#{$font-size} * #{$leading-factor} * 2);
 	  }
 
 	  div.links {
@@ -267,9 +266,10 @@ main {
 	  }
 
 	  img {
-		height: calc(76vh - 7rem);
+		height: calc(76vh - calc(#{$font-size} * #{$leading-factor} * 4));
 		width: auto;
-		padding-right: 3.5rem;
+		padding-right: calc(#{$font-size} * #{$leading-factor});
+		padding-bottom: 0;
 	  }
 	}
 
@@ -280,7 +280,7 @@ main {
 	  white-space: nowrap;
 
 	  .content {
-		margin: 3.5rem;
+		margin: calc(#{$font-size} * #{$leading-factor} * 2);
 	  }
 
 	  #bottom {
@@ -289,10 +289,10 @@ main {
 	  }
 
 	  div.project {
-		width: 20vw;
-		height: calc(76vh - 7rem);
+		width: 33vw;
+		height: calc(76vh - calc(#{$font-size} * #{$leading-factor} * 4));
 		white-space: normal;
-		padding-right: 3.5rem;
+		padding-right: calc(#{$font-size} * #{$leading-factor} * 2);
 	  }
 	}
 
@@ -302,20 +302,11 @@ main {
   }
 }
 
-@media only screen and (min-width: 1424px) {
+@media only screen and (min-width: 1400px) {
   main {
-	.center {
-	  margin: auto;
-	}
-
 	#idCard {
 	  width: 78vw;
 	  height: 62vh;
-	  flex-direction: row;
-
-	  .content {
-		margin: auto 3rem auto 3rem;
-	  }
 
 	  #left {
 		width: 26vw;
@@ -327,26 +318,19 @@ main {
 	  }
 	}
 
-	button {
-	  margin-bottom: 0;
+	h2 {
+	  line-height: calc(#{$font-size} * #{$leading-factor} * 3);
+	  padding-bottom: 0;
 	}
   }
 }
 
-@media only screen and (min-width: 1750px) {
+@media only screen and (min-width: 1900px) {
   main {
-	.center {
-	  margin: auto;
-	}
-
 	#idCard {
 	  width: 70vw;
 	  height: 53vh;
 	  flex-direction: row;
-
-	  .content {
-		margin: auto 3.5rem auto 3.5rem;
-	  }
 
 	  #left {
 		width: 26vw;
@@ -356,78 +340,6 @@ main {
 	  #right {
 		width: 44vw;
 	  }
-	}
-
-	#photoCard {
-	  height: 76vh;
-	  display: flex;
-	  flex-direction: row;
-	  overflow-y: hidden;
-	  overflow-x: scroll;
-	  white-space: nowrap;
-
-	  .content {
-		margin: 3.5rem;
-	  }
-
-	  #left {
-		width: 15vw;
-		min-width: auto;
-		height: 76vh;
-	  }
-
-	  #left > .content {
-		margin-bottom: 3.5rem;
-	  }
-
-	  div.links {
-		display: inherit;
-	  }
-
-	  img {
-		height: calc(76vh - 7rem);
-		width: auto;
-		padding-right: 3.5rem;
-	  }
-	}
-
-	#projectCard {
-	  height: 76vh;
-	  overflow-y: hidden;
-	  overflow-x: scroll;
-	  white-space: nowrap;
-
-	  .content {
-		margin: 3.5rem;
-	  }
-
-	  #bottom {
-		display: flex;
-		flex-direction: row;
-	  }
-
-	  div.project {
-		width: 20vw;
-		height: calc(76vh - 7rem);
-		white-space: normal;
-		padding-right: 3.5rem;
-	  }
-	}
-
-	h1 {
-	  font-size: 80pt;
-	}
-
-	h2 {
-	  font-size: 45pt;
-	}
-
-	p {
-	  font-size: 14pt;
-	}
-
-	button {
-	  margin-bottom: 0;
 	}
   }
 }

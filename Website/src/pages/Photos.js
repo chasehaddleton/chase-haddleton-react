@@ -22,7 +22,7 @@ class Photos extends Component {
 		if (this.filterType) {
 			data = data.filter((obj) => {
 				if (this.filterType === "all") return true;
-				return obj.type === this.filterType;
+				return obj.imageType === this.filterType;
 			});
 		} else {
 			data = data.filter((obj) => {
@@ -60,9 +60,11 @@ class Photos extends Component {
 						</div>
 					</Content>
 				</div>
-				<Content>
-					{photoNodes}
-				</Content>
+				<div classID="right" id="right">
+					<Content>
+						{photoNodes}
+					</Content>
+				</div>
 			</Card>);
 	}
 }

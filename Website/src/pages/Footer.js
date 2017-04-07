@@ -26,10 +26,12 @@ class Footer extends Component {
 			let className = "fa fa-" + obj.icon.toLowerCase();
 
 			if (uri === '/') {
-				return <NavLink exact to={uri} key={obj.to} activeClassName="selected"><i
+				return <NavLink exact to={uri} key={obj.to} activeClassName="selected" data-balloon="home"
+				                data-balloon-pos="up"><i
 					className={className}/></NavLink>;
 			} else {
-				return <NavLink to={uri} key={obj.to} activeClassName="selected"><i className={className}/></NavLink>;
+				return <NavLink to={uri} key={obj.to} activeClassName="selected" data-balloon={obj.to}
+				                data-balloon-pos="up"><i className={className}/></NavLink>;
 			}
 		});
 

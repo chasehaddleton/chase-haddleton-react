@@ -8,7 +8,7 @@ class Photo extends React.Component {
 		this.state = {
 			name: props.obj.name,
 			uri: staticContentURI + "/images/" + props.obj.fileName,
-			type: props.obj.type
+			type: props.obj.imageType
 		};
 	}
 
