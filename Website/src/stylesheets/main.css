@@ -198,9 +198,10 @@ main {
       margin-bottom: 0; }
   main #footer {
     background-color: #f1f1f3;
-    width: 15.5vw;
+    width: 218.75pt;
+    min-width: 214.375pt;
     height: 28.875pt;
-    margin: -28pt auto;
+    margin: -28.875pt auto;
     display: flex; }
     main #footer .content {
       display: flex;
@@ -211,9 +212,11 @@ main {
       padding-right: 14pt; }
     main #footer #left {
       min-width: 70pt;
-      border-right: solid #292A38 1px; }
+      border-right: solid #292A38 1px;
+      margin-right: 0; }
     main #footer #right {
-      min-width: 91.875pt; }
+      min-width: 91.875pt;
+      margin-right: 0; }
     main #footer .fa {
       color: #4A4C64;
       font-size: 17.5pt; }

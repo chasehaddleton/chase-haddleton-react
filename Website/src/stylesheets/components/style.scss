@@ -128,8 +128,8 @@ main {
 
   #footer {
 	background-color: $colour-500;
-	width: 15.5vw;
-	//min-width: #{ms(0) * 1.25 * 14};
+	width: #{ms(0) * 1.25 * (9.5 + 3)};
+	min-width: #{ms(0) * 1.25 * (9.25 + 3)};
 	height: #{ms(0) * 1.25 * 1.65};
 	margin: #{ms(0) * 1.25 * -1.65} auto;
 	display: flex;
@@ -146,10 +146,12 @@ main {
 	#left {
 	  min-width: #{ms(0) * 1.25 * 4};
 	  border-right: solid $colour-100 1px;
+	  margin-right: 0;
 	}
 
 	#right {
 	  min-width: #{ms(0) * 1.25 * 5.25};
+	  margin-right: 0;
 	}
 
 	.fa {
