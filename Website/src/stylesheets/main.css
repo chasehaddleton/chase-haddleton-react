@@ -314,31 +314,47 @@ main {
       display: flex;
       flex-direction: row; }
     main #projectCard div.project {
-      width: 33vw;
+      width: calc(100vw / 3);
       height: calc(76vh - 89.6pt);
       white-space: normal;
       padding-right: 44.8pt; }
   main button {
     margin-bottom: 0; } }
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1200px) {
   main #idCard {
-    width: 78vw;
-    height: 62vh; }
+    width: 95vw;
+    height: calc(95vw * (1/2.35));
+    min-height: 50vh; }
     main #idCard #left {
       width: 26vw;
-      height: 62vh; }
+      height: calc(95vw * (1/2.35));
+      min-height: 50vh; }
     main #idCard #right {
-      width: 52vw; } }
-@media only screen and (min-width: 1900px) {
+      width: calc(95vw - 26vw); } }
+@media only screen and (min-width: 1500px) {
   main #idCard {
-    width: 70vw;
-    height: 53vh;
-    flex-direction: row; }
+    width: 84vw;
+    height: calc(84vw * (1/2.35));
+    min-height: 50vh; }
     main #idCard #left {
       width: 26vw;
-      height: 53vh; }
+      height: calc(84vw * (1/2.35));
+      min-height: 50vh; }
     main #idCard #right {
-      width: 44vw; } }
+      width: calc(84vw - 26vw); } }
+@media only screen and (min-width: 1800px) {
+  main #idCard {
+    width: 77vw;
+    max-height: 591px;
+    max-width: 1388px;
+    height: calc(77vw * (1/2.35));
+    min-height: 50vh; }
+    main #idCard #left {
+      width: 26vw;
+      height: calc(77vw * (1/2.35));
+      min-height: 50vh; }
+    main #idCard #right {
+      width: calc(77vw - 26vw); } }
 .fade-appear {
   opacity: 0; }
 
