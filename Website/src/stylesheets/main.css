@@ -135,7 +135,7 @@ main {
   background-color: #c8c9d0;
   height: 100vh; }
   main .content {
-    margin: auto 11.2pt auto 11.2pt; }
+    margin: auto 11.32624pt auto 11.32624pt; }
   main div.fullPage {
     height: 100vh;
     display: flex;
@@ -154,7 +154,7 @@ main {
     flex-direction: column;
     overflow-y: scroll; }
     main #idCard .content {
-      margin: 22.4pt; }
+      margin: 22.65248pt; }
     main #idCard #left {
       width: 100vw;
       height: 53vh;
@@ -171,7 +171,7 @@ main {
     flex-direction: column;
     overflow-y: scroll; }
     main #photoCard .content {
-      margin: 22.4pt; }
+      margin: 22.65248pt; }
     main #photoCard #left, main #photoCard #right {
       width: 100vw; }
     main #photoCard #left > .content {
@@ -182,8 +182,8 @@ main {
       justify-content: space-around;
       flex-wrap: wrap; }
     main #photoCard img {
-      width: calc(100vw - 44.8pt);
-      padding-bottom: 11.2pt; }
+      width: calc(100vw - 45.30495pt);
+      padding-bottom: 11.32624pt; }
   main #projectCard {
     width: 100vw;
     height: calc(100vh - (1.25rem * 3));
@@ -191,55 +191,54 @@ main {
     flex-direction: column;
     overflow-y: scroll; }
     main #projectCard .content {
-      margin: 22.4pt; }
+      margin: 22.65248pt; }
     main #projectCard #top {
       width: 100vw; }
     main #projectCard #top > .content {
       margin-bottom: 0; }
   main #footer {
     background-color: #f1f1f3;
-    width: 10vw;
-    min-width: calc(2.25rem * 6.5 + 4rem);
-    height: calc(1.25rem * 2);
-    margin: calc(1.25rem * -2) auto;
+    width: 15.5vw;
+    height: 28.875pt;
+    margin: -28pt auto;
     display: flex; }
     main #footer .content {
       display: flex;
+      align-items: center;
       flex-direction: row;
       justify-content: space-between;
-      margin: auto 0 auto 1rem;
-      padding-right: 1rem; }
+      margin: auto auto auto 14pt;
+      padding-right: 14pt; }
     main #footer #left {
-      min-width: calc(2.25rem * 3);
+      min-width: 70pt;
       border-right: solid #292A38 1px; }
     main #footer #right {
-      min-width: calc(2.25rem * 3.5); }
+      min-width: 91.875pt; }
     main #footer .fa {
       color: #4A4C64;
-      font-size: 1.4rem; }
+      font-size: 17.5pt; }
     main #footer .fa-camera {
-      font-size: 1.2rem;
-      padding-top: 0.12rem; }
+      font-size: 14pt; }
     main #footer a.selected > i.fa {
       color: #D34242; }
   main h2 {
-    font-size: 35.84pt;
-    line-height: 44.8pt;
-    padding-bottom: 11.2pt; }
+    font-size: 36.65248pt;
+    line-height: 45.30495pt;
+    padding-bottom: 11.32624pt; }
   main p {
     font-family: "Lato", Helvetica, Arial, sans-serif;
     color: #4A4C64;
     font-weight: 400;
-    line-height: 22.4pt;
+    line-height: 22.65248pt;
     font-size: 14pt;
-    padding-bottom: 22.4pt; }
+    padding-bottom: 22.65248pt; }
   main h1, main h2, main h3, main h4, main h5, main h6 {
     font-family: "Lato", Helvetica, Arial, sans-serif;
     font-weight: 900;
     color: #4A4C64; }
   main h3 {
-    font-size: 22.4pt;
-    line-height: 35.84pt; }
+    font-size: 22.65248pt;
+    line-height: 36.65248pt; }
   main a {
     font-family: "Lato", Helvetica, Arial, sans-serif;
     text-decoration: none;
@@ -253,16 +252,16 @@ main {
     color: #4A4C64; }
   main div.links > div > a {
     font-size: 14pt;
-    line-height: calc(22.4pt); }
+    line-height: calc(22.65248pt); }
   main button {
     font-family: "Lato", Helvetica, Arial, sans-serif;
     color: #f1f1f3;
     background-color: #888999;
     border: none;
     font-size: 12pt;
-    line-height: 22.4pt;
-    padding: calc(12pt * 1.6 * .25) calc(12pt * 1.6 * .5) calc(12pt * 1.6 * .25) calc(12pt * 1.6 * .5);
-    margin-bottom: calc(12pt * 1.6); }
+    line-height: 22.65248pt;
+    padding: calc(12pt * 1.61803 * .25) calc(12pt * 1.61803 * .5) calc(12pt * 1.61803 * .25) calc(12pt * 1.61803 * .5);
+    margin-bottom: calc(12pt * 1.61803); }
   main button:hover, main button:active {
     box-shadow: 0 3px 14px 0 rgba(0, 0, 0, 0.16);
     background-color: #292A38; }
@@ -275,7 +274,7 @@ main {
     width: 100vw;
     flex-direction: row; }
     main #idCard .content {
-      margin: auto 44.8pt auto 44.8pt; }
+      margin: auto 45.30495pt auto 45.30495pt; }
     main #idCard #left {
       width: 34vw;
       height: 76vh; }
@@ -289,19 +288,19 @@ main {
     overflow-x: scroll;
     white-space: nowrap; }
     main #photoCard .content {
-      margin: 44.8pt; }
+      margin: 45.30495pt; }
     main #photoCard #left {
       width: 15vw;
       min-width: 280px;
       height: 76vh; }
     main #photoCard #left > .content {
-      margin-bottom: 44.8pt; }
+      margin-bottom: 45.30495pt; }
     main #photoCard div.links {
       display: inherit; }
     main #photoCard img {
-      height: calc(76vh - 89.6pt);
+      height: calc(76vh - 90.6099pt);
       width: auto;
-      padding-right: 22.4pt;
+      padding-right: 22.65248pt;
       padding-bottom: 0; }
   main #projectCard {
     height: 76vh;
@@ -309,36 +308,36 @@ main {
     overflow-x: scroll;
     white-space: nowrap; }
     main #projectCard .content {
-      margin: 44.8pt; }
+      margin: 45.30495pt; }
     main #projectCard #bottom {
       display: flex;
       flex-direction: row; }
     main #projectCard div.project {
       width: calc(100vw / 3);
-      height: calc(76vh - 89.6pt);
+      height: calc(76vh - 90.6099pt);
       white-space: normal;
-      padding-right: 44.8pt; }
+      padding-right: 45.30495pt; }
   main button {
     margin-bottom: 0; } }
 @media only screen and (min-width: 1200px) {
   main #idCard {
     width: 95vw;
-    height: calc(95vw * (1/2.35));
+    height: calc(95vw * (1 / 2.35));
     min-height: 50vh; }
     main #idCard #left {
       width: 26vw;
-      height: calc(95vw * (1/2.35));
+      height: calc(95vw * (1 / 2.35));
       min-height: 50vh; }
     main #idCard #right {
       width: calc(95vw - 26vw); } }
 @media only screen and (min-width: 1500px) {
   main #idCard {
     width: 84vw;
-    height: calc(84vw * (1/2.35));
+    height: calc(84vw * (1 / 2.35));
     min-height: 50vh; }
     main #idCard #left {
       width: 26vw;
-      height: calc(84vw * (1/2.35));
+      height: calc(84vw * (1 / 2.35));
       min-height: 50vh; }
     main #idCard #right {
       width: calc(84vw - 26vw); } }
@@ -347,11 +346,11 @@ main {
     width: 77vw;
     max-height: 591px;
     max-width: 1388px;
-    height: calc(77vw * (1/2.35));
+    height: calc(77vw * (1 / 2.35));
     min-height: 50vh; }
     main #idCard #left {
       width: 26vw;
-      height: calc(77vw * (1/2.35));
+      height: calc(77vw * (1 / 2.35));
       min-height: 50vh; }
     main #idCard #right {
       width: calc(77vw - 26vw); } }

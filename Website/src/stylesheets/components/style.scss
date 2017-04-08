@@ -2,7 +2,7 @@
 
 $modularscale: (
 		base: 14pt,
-		ratio: 1.6
+		ratio: $phi
 );
 $header-text-font: "Lato", Helvetica, Arial, sans-serif;
 $body-text-font: $header-text-font;
@@ -18,7 +18,7 @@ $font-colour: $colour-200;
 $accent-font-colour: $colour-400;
 $header-weight: 900;
 $font-weight: 400;
-$leading-factor: 1.6;
+$leading-factor: $phi;
 
 body {
   margin: 0;
@@ -101,7 +101,7 @@ main {
 	}
 
 	img {
-	  width: calc(100vw - #{ms(1)* 2});
+	  width: calc(100vw - #{ms(1) * 2});
 	  padding-bottom: #{ms(1) * .5};
 	}
   }
@@ -128,37 +128,37 @@ main {
 
   #footer {
 	background-color: $colour-500;
-	width: 10vw;
-	min-width: calc(2.25rem * 6.5 + 4rem);
-	height: calc(1.25rem * 2);
-	margin: calc(1.25rem * -2) auto;
+	width: 15.5vw;
+	//min-width: #{ms(0) * 1.25 * 14};
+	height: #{ms(0) * 1.25 * 1.65};
+	margin: #{ms(0) * 1.25 * -1.65} auto;
 	display: flex;
 
 	.content {
 	  display: flex;
+	  align-items: center;
 	  flex-direction: row;
 	  justify-content: space-between;
-	  margin: auto 0 auto 1rem;
-	  padding-right: 1rem;
+	  margin: auto auto auto ms(0);
+	  padding-right: ms(0);
 	}
 
 	#left {
-	  min-width: calc(2.25rem * 3);
+	  min-width: #{ms(0) * 1.25 * 4};
 	  border-right: solid $colour-100 1px;
 	}
 
 	#right {
-	  min-width: calc(2.25rem * 3.5);
+	  min-width: #{ms(0) * 1.25 * 5.25};
 	}
 
 	.fa {
 	  color: $colour-200;
-	  font-size: 1.4rem;
+	  font-size: #{ms(0) * 1.25};
 	}
 
 	.fa-camera {
-	  font-size: 1.2rem;
-	  padding-top: 0.12rem;
+	  font-size: ms(0);
 	}
 
 	a.selected > i.fa {
@@ -327,12 +327,12 @@ main {
   main {
 	#idCard {
 	  width: $medium-width;
-	  height: calc(#{$medium-width} * (1/2.35));
+	  height: calc(#{$medium-width} * (1 / 2.35));
 	  min-height: 50vh;
 
 	  #left {
 		width: 26vw;
-		height: calc(#{$medium-width} * (1/2.35));
+		height: calc(#{$medium-width} * (1 / 2.35));
 		min-height: 50vh;
 	  }
 
@@ -349,12 +349,12 @@ main {
   main {
 	#idCard {
 	  width: $large-width;
-	  height: calc(#{$large-width} * (1/2.35));
+	  height: calc(#{$large-width} * (1 / 2.35));
 	  min-height: 50vh;
 
 	  #left {
 		width: 26vw;
-		height: calc(#{$large-width} * (1/2.35));
+		height: calc(#{$large-width} * (1 / 2.35));
 		min-height: 50vh;
 	  }
 
@@ -373,12 +373,12 @@ main {
 	  width: $x-large-width;
 	  max-height: 591px;
 	  max-width: 1388px;
-	  height: calc(#{$x-large-width} * (1/2.35));
+	  height: calc(#{$x-large-width} * (1 / 2.35));
 	  min-height: 50vh;
 
 	  #left {
 		width: 26vw;
-		height: calc(#{$x-large-width} * (1/2.35));
+		height: calc(#{$x-large-width} * (1 / 2.35));
 		min-height: 50vh;
 	  }
 
