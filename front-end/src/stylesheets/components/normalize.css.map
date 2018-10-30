@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "mappings": "AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;KAgFM;EACJ,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,MAAM,EAAE,CAAC;EACT,SAAS,EAAE,IAAI;EACf,IAAI,EAAE,OAAO;EACb,cAAc,EAAE,QAAQ;;AAE1B,iDAAiD;AAEjD;;;;;;;;;;;IAWK;EACH,OAAO,EAAE,KAAK;;AAGhB,IAAK;EACH,WAAW,EAAE,CAAC;;AAGhB;EACG;EACD,UAAU,EAAE,IAAI;;AAGlB;CACE;EACA,MAAM,EAAE,IAAI;;AAGd;;;OAGQ;EACN,OAAO,EAAE,EAAE;EACX,OAAO,EAAE,IAAI;;AAGf,KAAM;EACJ,eAAe,EAAE,QAAQ;EACzB,cAAc,EAAE,CAAC;;AAGnB,gBAAiB;EACf,MAAM,EAAE,IAAI",
+  "sources": [
+	"normalize.scss"
+  ],
+  "names": [],
+  "file": "normalize.css"
+}

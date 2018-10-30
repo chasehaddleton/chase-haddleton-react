@@ -1,1 +1,0 @@
-// TODO: Figure out a DB software to use to store the image data.

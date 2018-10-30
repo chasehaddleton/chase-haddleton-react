@@ -1,15 +1,16 @@
-# User-specific stuff:
-/.idea
+# See http://help.github.com/ignore-files/ for more about ignoring files.
 
-## File-based project format:
-*.iws
+# dependencies
+front-end/node_modules
 
-## Plugin-specific files:
+# testing
+coverage
 
-# IntelliJ
-/out/
+# production
+front-end/build
 
-# mpeltonen/sbt-idea plugin
-.idea_modules/
-/Website/old
-/Website/node_modules
+# misc
+.DS_Store
+.env
+npm-debug.log
+.idea
