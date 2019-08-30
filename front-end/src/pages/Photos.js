@@ -1,9 +1,8 @@
 import React, {Component} from "react";
-import Card from "../components/Card";
 import {Link, NavLink} from "react-router-dom";
 import Content from "../components/Content";
 import Photo from "../components/Photo";
-import {imageData} from '../components/Config';
+import {imageData} from "../components/Config";
 
 class Photos extends Component {
 	constructor(props) {
@@ -47,12 +46,12 @@ class Photos extends Component {
 		const links = ["All", "Music", "Portrait", "Action", "Landscape", "Other"].map(
 			(uri) => {
 				let link = "/photos/" + uri.toLocaleLowerCase();
-				return (<div key={uri}><NavLink to={link} activeClassName="selected">{uri}</NavLink><br /></div>);
+				return (<div key={uri}><NavLink to={link} activeClassName="selected">{uri}</NavLink><br/></div>);
 			});
 
 		return (
-			<Card id="photoCard">
-				<div classID="left" id="left">
+			<div id="photos">
+				<div className="left" id="left">
 					<Content>
 						<Link to="/photos"><h2>Photos</h2></Link>
 						<div className="links">
@@ -60,12 +59,12 @@ class Photos extends Component {
 						</div>
 					</Content>
 				</div>
-				<div classID="right" id="right">
+				<div className="right" id="right">
 					<Content>
 						{photoNodes}
 					</Content>
 				</div>
-			</Card>);
+			</div>);
 	}
 }
 

@@ -134,13 +134,16 @@ body {
 main {
   text-rendering: optimizeLegibility;
   background-color: #c8c9d0;
-  height: 100vh; }
+  height: 100vh;
+  display: flex;
+  flex-direction: column; }
   main .content {
     margin: auto 11.326238pt auto 11.326238pt; }
   main div.fullPage {
-    height: 100vh;
+    height: calc(100vh - 69.9627495pt);
+    margin-top: 69.9627495pt;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between; }
   main .card {
     background-color: #f1f1f3;
@@ -150,7 +153,7 @@ main {
     margin: 0; }
   main #idCard {
     width: 100vw;
-    height: calc(100vh - (1.25rem * 3));
+    height: calc(100vh - 52.304952pt);
     display: flex;
     flex-direction: column;
     overflow-y: scroll; }
@@ -165,26 +168,39 @@ main {
       display: flex;
       width: 100vw;
       height: 100%; }
-  main #photoCard {
+      main #idCard #right h2 {
+        font-size: 36.6524763522pt;
+        line-height: 45.304952pt;
+        padding-bottom: 11.326238pt; }
+  main #photos {
     width: 100vw;
-    height: calc(100vh - (1.25rem * 3));
     display: flex;
     flex-direction: column;
     overflow-y: scroll; }
-    main #photoCard .content {
-      margin: 22.652476pt; }
-    main #photoCard #left, main #photoCard #right {
+    main #photos #right {
       width: 100vw; }
-    main #photoCard #left > .content {
-      margin-bottom: 0; }
-    main #photoCard div.links {
+      main #photos #right .content {
+        display: flex;
+        flex-direction: column; }
+        main #photos #right .content .photoSet {
+          margin: auto;
+          padding-bottom: 16.989357pt; }
+        main #photos #right .content img {
+          width: auto;
+          max-width: 100vw;
+          max-height: calc(95vh - 69.9627495pt);
+          padding-bottom: 11.326238pt; }
+    main #photos #left {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+      main #photos #left .content {
+        margin-bottom: 0; }
+    main #photos div.links {
       display: flex;
       flex-direction: row;
       justify-content: space-around;
       flex-wrap: wrap; }
-    main #photoCard img {
-      width: calc(100vw - 45.304952pt);
-      padding-bottom: 11.326238pt; }
   main #projectCard {
     width: 100vw;
     height: calc(100vh - (1.25rem * 3));
@@ -202,38 +218,41 @@ main {
       height: 70vh;
       max-height: 600px;
       margin: auto; }
-  main #footer {
+  main #header {
+    position: fixed;
     background-color: #f1f1f3;
-    width: 218.75pt;
-    min-width: 214.375pt;
-    height: 28.875pt;
-    margin: -28.875pt auto;
-    display: flex; }
-    main #footer .content {
+    width: 100vw;
+    padding: 7pt;
+    display: flex;
+    flex-direction: column; }
+    main #header #navigation {
+      margin: 0;
+      padding-right: 0;
+      justify-content: flex-start; }
+    main #header .content {
       display: flex;
       align-items: center;
       flex-direction: row;
       justify-content: space-between;
       margin: auto auto auto 14pt;
       padding-right: 14pt; }
-    main #footer #left {
-      min-width: 70pt;
+    main #header #left {
+      width: 52.5pt;
       border-right: solid #292A38 1px;
       margin-right: 0; }
-    main #footer #right {
-      min-width: 91.875pt;
-      margin-right: 0; }
-    main #footer .fa {
+    main #header #right {
+      width: 109.375pt;
+      margin-right: 22.652476pt; }
+    main #header .fa {
       color: #4A4C64;
       font-size: 17.5pt; }
-    main #footer .fa-camera {
+    main #header .fa-camera {
       font-size: 14pt; }
-    main #footer a.selected > i.fa {
+    main #header a.selected > i.fa {
       color: #D34242; }
-  main h2 {
-    font-size: 36.6524763522pt;
-    line-height: 45.304952pt;
-    padding-bottom: 11.326238pt; }
+  main h1 {
+    font-size: 27.4893572641pt;
+    line-height: 39.641833pt; }
   main p {
     font-family: "Lato", Helvetica, Arial, sans-serif;
     color: #4A4C64;
@@ -275,14 +294,20 @@ main {
     box-shadow: 0 3px 14px 0 rgba(0, 0, 0, 0.16);
     background-color: #292A38; }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 700px) {
+  main div.fullPage {
+    height: calc(100vh - 52.304952pt);
+    margin-top: 52.304952pt; }
   main .center {
     margin: auto; }
+  main #header {
+    flex-direction: row; }
   main #idCard {
     height: 76vh;
     width: 100vw;
     flex-direction: row;
-    overflow: hidden; }
+    overflow: hidden;
+    margin: auto; }
     main #idCard .content {
       margin: auto 45.304952pt auto 45.304952pt; }
     main #idCard #left {
@@ -290,33 +315,41 @@ main {
       height: 76vh; }
     main #idCard #right {
       width: 66vw; }
-  main #photoCard {
-    height: 76vh;
+  main #photos {
     display: flex;
     flex-direction: row;
-    overflow-y: hidden;
-    overflow-x: scroll;
+    overflow-y: scroll;
     white-space: nowrap; }
-    main #photoCard .content {
+    main #photos .content {
       margin: 45.304952pt; }
-    main #photoCard #left {
-      width: 15vw;
-      min-width: 280px;
-      height: 76vh; }
-    main #photoCard #left > .content {
-      margin-bottom: 45.304952pt; }
-    main #photoCard div.links {
+    main #photos #right {
+      margin-left: 15vw;
+      width: 70vw; }
+      main #photos #right .content {
+        display: flex;
+        flex-direction: column; }
+        main #photos #right .content img {
+          height: auto;
+          max-width: 60vw;
+          padding-bottom: 0;
+          margin: auto; }
+        main #photos #right .content .description {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between; }
+    main #photos #left {
+      position: fixed;
+      width: 15vw; }
+      main #photos #left .content {
+        margin-bottom: 45.304952pt; }
+    main #photos div.links {
       display: inherit; }
-    main #photoCard img {
-      height: calc(76vh - 90.609904pt);
-      width: auto;
-      padding-right: 22.652476pt;
-      padding-bottom: 0; }
   main #projectCard {
     height: 76vh;
     overflow-y: hidden;
     overflow-x: scroll;
-    white-space: nowrap; }
+    white-space: nowrap;
+    margin: auto; }
     main #projectCard .content {
       margin: 45.304952pt; }
     main #projectCard #bottom {

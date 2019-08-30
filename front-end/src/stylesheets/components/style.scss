@@ -6,6 +6,8 @@ $modularscale: (
 );
 
 $header-text-font: "Lato", Helvetica, Arial, sans-serif;
+$header-height: #{ms(1) * 2 + ms(0) * .5};
+$mobile-header-height: #{1.5 * (ms(1) * 1.75 + ms(0) * .5)};
 $body-text-font: $header-text-font;
 $colour-100: #292A38;
 $colour-200: #4A4C64;
@@ -29,15 +31,18 @@ main {
   text-rendering: optimizeLegibility;
   background-color: $colour-400;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 
   .content {
 	margin: auto #{ms(1) * .5} auto #{ms(1) * .5};
   }
 
   div.fullPage {
-	height: 100vh;
+	height: calc(100vh - #{$mobile-header-height});
+	margin-top: #{$mobile-header-height};
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: space-between;
   }
 
@@ -53,7 +58,7 @@ main {
 
   #idCard {
 	width: 100vw;
-	height: calc(100vh - (1.25rem * 3));
+	height: calc(100vh - #{$header-height});
 	display: flex;
 	flex-direction: column;
 	overflow-y: scroll;
@@ -73,26 +78,50 @@ main {
 	  display: flex;
 	  width: 100vw;
 	  height: 100%;
+
+	  h2 {
+		font-size: ms(2);
+		line-height: #{ms(1) * 2};
+		padding-bottom: #{ms(1) * .5};
+	  }
 	}
   }
 
-  #photoCard {
+  #photos {
 	width: 100vw;
-	height: calc(100vh - (1.25rem * 3));
 	display: flex;
 	flex-direction: column;
 	overflow-y: scroll;
 
-	.content {
-	  margin: ms(1);
-	}
-
-	#left, #right {
+	#right {
 	  width: 100vw;
+
+	  .content {
+		display: flex;
+		flex-direction: column;
+
+		.photoSet {
+		  margin: auto;
+		  padding-bottom: #{ms(1) * .75};
+		}
+
+		img {
+		  width: auto;
+		  max-width: 100vw;
+		  max-height: calc(95vh - #{$mobile-header-height});
+		  padding-bottom: #{ms(1) * .5};
+		}
+	  }
 	}
 
-	#left > .content {
-	  margin-bottom: 0;
+	#left {
+	  display: flex;
+	  flex-direction: row;
+	  justify-content: space-between;
+
+	  .content {
+		margin-bottom: 0;
+	  }
 	}
 
 	div.links {
@@ -100,11 +129,6 @@ main {
 	  flex-direction: row;
 	  justify-content: space-around;
 	  flex-wrap: wrap;
-	}
-
-	img {
-	  width: calc(100vw - #{ms(1) * 2});
-	  padding-bottom: #{ms(1) * .5};
 	}
   }
 
@@ -137,14 +161,19 @@ main {
 	}
   }
 
-  #footer {
+  #header {
+	position: fixed;
 	background-color: $colour-500;
-	// TODO: make this more elegant
-	width: #{ms(0) * 1.25 * (9.5 + 3)};
-	min-width: #{ms(0) * 1.25 * (9.25 + 3)};
-	height: #{ms(0) * 1.25 * 1.65};
-	margin: #{ms(0) * 1.25 * -1.65} auto;
+	width: 100vw;
+	padding: #{ms(0)/2};
 	display: flex;
+	flex-direction: column;
+
+	#navigation {
+	  margin: 0;
+	  padding-right: 0;
+	  justify-content: flex-start;
+	}
 
 	.content {
 	  display: flex;
@@ -156,14 +185,14 @@ main {
 	}
 
 	#left {
-	  min-width: #{ms(0) * 1.25 * 4};
+	  width: #{ms(0) * 3 * 1.25};
 	  border-right: solid $colour-100 1px;
 	  margin-right: 0;
 	}
 
 	#right {
-	  min-width: #{ms(0) * 1.25 * 5.25};
-	  margin-right: 0;
+	  width: #{ms(0) * 1.25 * 5 * 1.25};
+	  margin-right: ms(1);
 	}
 
 	.fa {
@@ -180,10 +209,9 @@ main {
 	}
   }
 
-  h2 {
-	font-size: ms(2);
-	line-height: #{ms(1) * 2};
-	padding-bottom: #{ms(1) * .5};
+  h1 {
+	font-size: #{ms(2) * .75};
+	line-height: #{ms(1) * 1.75};
   }
 
   p {
@@ -247,10 +275,19 @@ main {
   }
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 700px) {
   main {
+	div.fullPage {
+	  height: calc(100vh - #{$header-height});
+	  margin-top: #{$header-height};
+	}
+
 	.center {
 	  margin: auto;
+	}
+
+	#header {
+	  flex-direction: row;
 	}
 
 	#idCard {
@@ -258,6 +295,7 @@ main {
 	  width: 100vw;
 	  flex-direction: row;
 	  overflow: hidden;
+	  margin: auto;
 
 	  .content {
 		margin: auto #{ms(1) * 2} auto #{ms(1) * 2};
@@ -273,37 +311,50 @@ main {
 	  }
 	}
 
-	#photoCard {
-	  height: 76vh;
+	#photos {
 	  display: flex;
 	  flex-direction: row;
-	  overflow-y: hidden;
-	  overflow-x: scroll;
+	  overflow-y: scroll;
 	  white-space: nowrap;
 
 	  .content {
 		margin: #{ms(1) * 2};
 	  }
 
-	  #left {
-		width: 15vw;
-		min-width: 280px;
-		height: 76vh;
+	  #right {
+		margin-left: 15vw;
+		width: 70vw;
+
+		.content {
+		  display: flex;
+		  flex-direction: column;
+
+		  img {
+			height: auto;
+			max-width: 60vw;
+			padding-bottom: 0;
+			margin: auto;
+		  }
+
+		  .description {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		  }
+		}
 	  }
 
-	  #left > .content {
-		margin-bottom: #{ms(1) * 2};
+	  #left {
+		position: fixed;
+		width: 15vw;
+
+		.content {
+		  margin-bottom: #{ms(1) * 2};
+		}
 	  }
 
 	  div.links {
 		display: inherit;
-	  }
-
-	  img {
-		height: calc(76vh - #{ms(1) * 4});
-		width: auto;
-		padding-right: ms(1);
-		padding-bottom: 0;
 	  }
 	}
 
@@ -312,6 +363,7 @@ main {
 	  overflow-y: hidden;
 	  overflow-x: scroll;
 	  white-space: nowrap;
+	  margin: auto;
 
 	  .content {
 		margin: #{ms(1) * 2};
